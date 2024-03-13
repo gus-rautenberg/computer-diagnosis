@@ -88,3 +88,64 @@ hard_drive_tested_good($ans)
     $ans = yn
 
 # Video Failure
+
+monitor_led_on($ans)
+    Led do monitor liga?
+    ---
+    $ans = yn
+
+dual_monitors($ans)
+    Tem dois monitores?
+    ---
+    $ans = yn
+
+hdtv($ans)
+    Um monitor é HDTV?
+    ---
+    $ans = yn
+
+heer_a_string_of_beeps($ans)
+    Escuta uma sequencia de "beeps"?
+    ---
+    $ans = yn
+
+video_card_seated_tested($ans)
+    A placa de video esta conectada?
+    ---
+    $ans = yn
+
+pc_memory_tested($ans)
+    A memoria esta conectada?
+    ---
+    $ans = yn
+
+video_cable_secure($ans)
+    O cabo da placa de video esta corretamente conectado
+    ---
+    $ans = yn
+
+cable_damaged_bent_pins($ans)
+    O cabo esta com defeito?
+    ---
+    $ans = yn
+
+monitor_tested($ans)
+    O monitor funciona em outro dispositivo?
+    ---
+    $ans = yn
+
+other_adapter_crossfire_sli($ans)
+    Possuem adaptadores ou mais de uma placa grafica conectada?
+    ---
+    $ans = yn
+
+live_only_with_new_video_card($ans)
+    Liga somente com uma nova placa?
+    ---
+    $ans = yn
+
+live_only_with_solo_video_card($ans)
+    Liga com a utilização somente da placa de video?
+    ---
+    $ans = yn
+
