@@ -1,0 +1,68 @@
+# Questions.kqb
+
+power_comes_on($ans)
+    Computador liga?
+    ---
+    $ans = yn
+
+live_screen($ans)
+    A tela liga?
+    ---
+    $ans = yn
+
+new_build($ans)
+    Montou o PC recentemente?
+    ---
+    $ans = yn
+
+needs_two_tries_to_boot($ans)
+    Precisou clicar duas vezes para ligar?
+    ---
+    $ans = yn
+
+hear_more_than_1_beep($ans)
+    Escutou mais de 1 "beep"?
+    ---
+    $ans = yn
+
+new_hardware_installed($ans)
+    Instalou um nova peça?
+    ---
+    $ans = yn
+
+loud_fan_noise($ans)
+    A ventoinha esta barulhenta?
+    ---
+    $ans = yn
+
+hdd_or_os_error($ans)
+    Esta tendo problema no HD ou Sistema Operacional?
+    ---
+    $ans = yn
+
+ac_power_source_tested($ans)
+    Testou a fonte de alimentação?
+    ---
+    $ans = yn
+
+psu_universal_input($ans)
+    A fonte é universal?
+    ---
+    $ans = yn
+
+checked_motherboard_lead($ans)
+    Conectou o cabo da placa-mãe?
+    ---
+    $ans = yn
+
+power_switch_fail($ans)
+    Botão de ligar falou?
+    ---
+    $ans = yn
+
+psu_connections_to_motherboard_correct($ans)
+    Os cabos de energia estão conectados corretamente na placa mãe?
+    ---
+    $ans = yn
+
+forced_hard_drive_spin_up($ans)
