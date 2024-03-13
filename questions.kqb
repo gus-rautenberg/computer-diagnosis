@@ -1,5 +1,7 @@
 # Questions.kqb
 
+# POWER SUPPLY (PSU) FAILURE
+
 power_comes_on($ans)
     Computador liga?
     ---
@@ -66,3 +68,23 @@ psu_connections_to_motherboard_correct($ans)
     $ans = yn
 
 forced_hard_drive_spin_up($ans)
+    O disco esta em alta rotação desnecessariamente?
+    ---
+    $ans = yn
+
+bad_adapter_on_bus($ans)
+    Adaptador do barramento esta ruim?
+    ---
+    $ans = yn
+
+powers_motherboard_on_bench($ans)
+    A placa mãe liga em um teste de mesa?
+    ---
+    $ans = yn
+
+hard_drive_tested_good($ans)
+    Testou o disco em outro computador?
+    ---
+    $ans = yn
+
+# Video Failure
