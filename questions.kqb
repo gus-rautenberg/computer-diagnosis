@@ -370,5 +370,105 @@ onboard_device_issue($ans)
 
 banks_matched_ganged($ans)
     As memorias estão configuradas para trabalhar em conjunto? # seria isso?
+    ---
+    $ans = yn
 
 # Hard Drive Boot and Performance
+os_on_drive_boots($ans)
+    Sistema operacional inicia quando liga o dispositivo?
+    ---
+    $ans = yn
+
+cmos_boot_order_set($ans)
+    Ordem de inicialização no CMOS esta configurada?
+    ---
+    $ans = yn
+
+# aqui seria OS DVD, USB boot? como não temos mais DVD, ficara so USB
+os_usb_boot($ans)
+    Sistema operacional foi instalado pelo USB ? # seria isso ?
+    ---
+    $ans = yn
+
+just_switched_to_ahci($ans)
+    Alterou a configuração para AHCI?
+    ---
+    $ans = yn
+
+# aqui seria Read in USB shell or after DVD boot, não tera mais o dvd
+read_in_usb_shell($ans)
+    Leu o USB a partir de um shell ? # seria isso ?
+    ---
+    $ans = yn
+
+have_good_back_up($ans)
+    Tem um backup pronto ?
+    ---
+    $ans = yn
+
+slow_or_noisy($ans)
+    Devagar ou fazendo bastante barulho?
+    ---
+    $ans = yn
+
+sata_drivers_installed($ans)
+    Drivers SATA estão instalados?
+    ---
+    $ans = yn
+
+scans_scheduled($ans)
+    O dispositivo tem "scans" automaticos?
+    ---
+    $ans = yn
+
+ten_per_cent_or_more_free_space($ans)
+    O dispositivo tem pelo menos 10% de espaço livre?
+    ---
+    $ans = yn
+
+ahci_for_sata_dma_for_pata($ans)
+    O SATA esta usando ahci ou o PATA esta usando DMA?
+    ---
+    $ans = yn
+
+ssd_drive($ans)
+    O dispositivo de armazenamento é um SSD?
+    ---
+    $ans = yn
+
+new_drive($ans)
+    O dispositivo de armazenamento é novo?
+    ---
+    $ans = yn
+
+tweaked_settings($ans)
+    As configurações foram ajustadas?
+    ---
+    $ans = yn
+
+ran_scandisk_and_defrag($ans)
+    Executou a verificação de integridade do sistema de arquivos e a desfragmentação do disco?
+    ---
+    $ans = yn
+
+drive_always_noisy($ans)
+    O disco sempre esta barulhento?
+    ---
+    $ans = yn
+
+cycles_on_and_off($ans)
+    Liga e desliga repetidamente ?
+    ---
+    $ans = yn
+
+data_or_smart_errors($ans)
+    Erro nos dados ou erro SMART ? 
+    ---
+    $ans = yn
+
+raid_performance_recovery($ans)
+    Fez a recuperação da performace do RAID?
+    ---
+    $ans = yn
+
+
