@@ -1,11 +1,11 @@
 # Questions.kqb
-# POWER SUPPLY (PSU) FAILURE
-# Video Failure
-# Motherboard, CPU, RAM Failure
-# Motherboard, CPU, RAM Performance
-# Hard Drive Boot and Performance
-# Network Hardware Diagnostics
-# ATA Drive Failure
+# POWER SUPPLY (PSU) FAILURE linha 10
+# Video Failure linha 97
+# Motherboard, CPU, RAM Failure linha 184
+# Motherboard, CPU, RAM Performance linha 280
+# Hard Drive Boot and Performance linha 383
+# Network Hardware Diagnostics linha 481
+# ATA Drive Failure linha 588
 
 # POWER SUPPLY (PSU) FAILURE
 
@@ -553,7 +553,7 @@ device_manager_problem($ans)
 tried_different_port_on_hub($ans)
     Tentou uma porta diferente no hub?
     ---
-    $asn = yn
+    $ans = yn
 
 fails_on_traffic_number_of_users($ans)
     Falha quando um certo numero de usuarios utiliza a rede?
@@ -586,3 +586,88 @@ within_physical_layer_limits($ans)
     $ans = yn
 
 # ATA Drive Failure
+
+bios_register_drive($ans)
+    A BIOS indentifica o disco ?
+    ---
+    $ans = yn
+
+ssd_drive($ans)
+    O disco é um SSD?
+    ---
+    $ans = yn
+
+pata_or_sata($ans)
+    O SSD é tipo PATA ou SATA?
+    ---
+    $ans = yn
+
+sata_drive($ans)
+    O SSD é tipo SATA?
+    ---
+    $ans = yn
+
+sata_two_or_sata_three($ans)
+    O SSD é um SATA2 ou SATA3 ?
+    ---
+    $ans = yn
+
+data_connection_good($ans)
+    O cabo de conexão de dados esta bom ?
+    ---
+    $ans = yn
+
+set_master_slave($ans)
+    O disco esta configurado nos padrões "Mestre" e "Escravo" ?
+    ---
+    $ans = yn
+
+set_cable_select_cs($ans)
+    O disco esta configurado no padrão "Cable Select (CS)"?
+    ---
+    $ans = yn
+
+cables_seated_new($ans)
+    Os cabos utilizados são novos?
+    ---
+    $ans = yn
+
+ide_ribbon_cable_keyed($ans)
+    Esta utilizando cabos do tipo Ribbon?
+    ---
+    $ans = yn
+
+drive_seek_spin_up($ans)
+    O disco esta funcionando (fisicamente)?
+    ---
+    $ans = yn
+
+smart_error($ans)
+    Esta ocorrendo o erro do tipo SMART?
+    ---
+    $ans = yn
+
+firmware_updated($ans)
+    Os firmwares estão atualizados ?
+    ---
+    $ans = yn
+
+does_os_tool_see_drive($ans)
+    As ferramentas do sistema operacional reconhecem o disco?
+    ---
+    $ans = yn
+
+drive_cycles_up_down($ans)
+    O ciclos do disco ligam e desligam ? # seria isso ?
+    ---
+    $ans = yn
+
+clicks_unending($ans)
+    O disco esta causando cliques continuos ? # seria isso ?
+    ---
+    $ans = yn
+
+mode_transfer_speed_correct($ans)
+    O modo e a velocidade de transferencia do disco esta correta?
+    ---
+    $ans = yn
