@@ -553,7 +553,7 @@ device_manager_problem($ans)
 tried_different_port_on_hub($ans)
     Tentou uma porta diferente no hub?
     ---
-    $asn = yn
+    $ans = yn
 
 fails_on_traffic_number_of_users($ans)
     Falha quando um certo numero de usuarios utiliza a rede?
