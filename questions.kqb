@@ -149,3 +149,226 @@ live_only_with_solo_video_card($ans)
     ---
     $ans = yn
 
+no_power_displayed($ans)
+    Apareceu "No Power"?
+    ---
+    $ans = yn
+
+no_signal_displayed($ans)
+    Apareceu "No Signal"?
+    ---
+    $ans = yn
+
+onboard_video_trumps_replacement_adapter($ans)
+    A placa de video integrada é melhor que instalada?
+    ---
+    $ans = yn
+
+freezes_on_bios_screen($ans)
+    Congela na tela de BIOS?
+    ---
+    $ans = yn
+
+fan_noisy($ans)
+    A ventoinha esta fazendo barulho?
+    ---
+    $ans = yn
+
+# Motherboard, CPU, RAM Failure
+
+# não sei se a pergunta abaixo é pertinente
+power_diagnostic_done($ans)
+    Diagnostico de energia feito?
+    ---
+    $ans = yn
+
+# não sei se a pergunta abaixo é pertinente
+video_diagnostic_done($ans)
+    Diagnostico de video feito?
+    ---
+    $ans = yn
+
+# a pergunta new build, CPU or RAM upgrade? vou separar em dois (a pergunta new_build ja existe, então so vai ter a segunda parte)
+
+cpu_or_ram_upgrade($ans)
+    Melhorou a CPU ou RAM?
+    ---
+    $ans = yn
+
+ram_reseated($ans)
+    Recolocou a RAM?
+    ---
+    $ans = yn
+
+cpu_seated_flat($ans)
+    Instalou o CPU corretamente alinhada?
+    ---
+    $ans = yn
+
+bios_settings_change($ans)
+    Mudou a configuração da BIOS?
+    ---
+    $ans = yn
+
+fan_on_heatsink_active($ans)
+    Ventoinha do dissipador de calor esta ativo?
+    ---
+    $ans = yn
+
+# aqui seria o more than on beep ? mas ja temos uma função hear_more_than_1_beep
+
+default_motherboard_settings($ans)
+    Configuração da placa mãe esta padrão?
+    ---
+    $ans = yn
+
+runs_on_bench($ans)
+    Funciona em um teste de mesa?
+    ---
+    $ans = yn
+
+cpu_swap_work($ans)
+    Funciona com outra CPU?
+    ---
+    $ans = yn
+
+freezes_on_boot($ans)
+    Congela quando esta inicializando? # seria isso ?
+    ---
+    $ans = yn
+
+freezes_bare_bones($ans)
+    Congela com a configuração mínima de hardware?
+    ---
+    $ans = yn
+
+can_you_acess_BIOS($ans)
+    Consegue acessar a BIOS?
+    ---
+    $ans = yn
+
+cmos_settings_default($ans)
+    Configuração do CMOS esta padrão?
+    ---
+    $ans = yn
+
+temp_and_voltage_stable($ans)
+    Temperatura e voltagem estão estaveis?
+    ---
+    $ans = yn
+
+# aqui vou tranformar o ram certified, tested? em duas perguntas
+ram_certified($ans)
+    A memoria RAM é compativel?
+    ---
+    $ans = yn
+
+ram_tested($ans)
+    A memoria RAM funciona em outro dispositivo?
+    ---
+    $ans = yn
+
+# aqui teria a pergunta Boots from CD or DVD, mas como não vamos implementar essa parte não colocarei
+
+# Motherboard CPU, RAM Performance
+
+random_reboot_or_freeze($ans)
+    Aleatoriamente reinicia ou congela? 
+    ---
+    $ans = yn
+
+clean_power($ans)
+    Energia chega de forma limpa? # seria isso ?
+    ---
+    $ans = yn
+
+cpu_temperature_stable($ans)
+    Temperatura da CPU esta estavel?
+    ---
+    $ans = yn
+
+# mais uma vez vou tranformar em duas perguntas ran scan, system restore?
+
+ran_scan($ans)
+    Escaneou o dispositivo?
+    ---
+    $ans = yn
+
+system_restore($ans)
+    Restaurou o sistema?
+    ---
+    $ans = yn
+
+bios_updated($ans)
+    Atualizou a BIOS?
+    ---
+    $ans = yn
+
+# aqui seria o ram_tested, mas ja existe
+
+# não sei se faz sentido esse aqui, afinal seria o teste de energia
+psu_tested_good($ans)
+    A energia esta funcionando corretamente?
+    ---
+    $ans = yn
+
+# aqui vai ser duas perguntas, GPU temp, driver updated 
+gpu_temp($ans)
+    A temperatura da GPU esta certa?
+    ---
+    $ans = yn
+
+driver_updated($ans)
+    Os drivers estão atualizados?
+    ---
+    $ans = yn
+
+tested_bare_bones($ans)
+    Testou nas configurações minimas?
+    ---
+    $ans = yn
+
+forgets_time_cmos_settings($ans)
+    Dispositivo esquece a configuração do CMOS? # seria isso?
+    ---
+    $ans = yn
+
+wont_wake_from_sleep($ans)
+    Não sai do modo "sleep" (dormindo)
+    ---
+    $ans = yn
+
+hangs_installing_drivers($ans)
+    Não consegue atualizar os drivers?
+    ---
+    $ans = yn
+
+recent_performance_drop($ans)
+    Performace diminiu recentemente?
+    ---
+    $ans = yn
+
+os_missing_cpu_cores($ans)
+    Sistema operacional não esta reconhecendo o numero de cores do CPU?
+    ---
+    $ans = yn
+
+ram_performance_slow($ans)
+    Memoria ram esta lenta?
+    ---
+    $ans = yn
+
+pcie_version_slot_lanes($ans)
+    Versão do PCI Express é compativel com os "slots" (espaços disponiveis para conexão)? # seria isso?
+    ---
+    $ans = yn
+
+onboard_device_issue($ans)
+    Problema com dispositivo integrado?
+    ---
+    $ans = yn
+
+banks_matched_ganged($ans)
+    As memorias estão configuradas para trabalhar em conjunto? # seria isso?
+
+# Hard Drive Boot and Performance
