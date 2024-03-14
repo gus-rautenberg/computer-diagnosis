@@ -1,25 +1,25 @@
 what_to_do_check_power_requirement_vs_rating
-    use what_to_do(Cheque a energia necessaria com a energia recebida)
+    use what_to_do("Cheque a energia necessaria com a energia recebida")
     when 
         questions.power_comes_on(True)
         questions.live_screen(True)
         questions.new_build(True)
 
 what_to_do_connect_to_know_good_outlet
-    use what_to_do(Conecte com uma fonte de energia confiável/já testada)
+    use what_to_do("Conecte com uma fonte de energia confiável/já testada")
     when
         questions.power_comes_on(False)
         questions.ac_power_source_tested(False)
 
 what_to_do_select_proper_voltage_on_rear_of_power_suply
-    use what_to_do(Seleciona a voltagem correta na parte traseira da fonte)
+    use what_to_do("Seleciona a voltagem correta na parte traseira da fonte")
     when
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
         questions.psu_universal_input(False)
 
 what_to_do_make_sure_fonte_panel_switch_to_motherboard_lead_is_connected_to_the_proper_point
-    use what_to_do(Verifique se o painel da fonte esteja conectado corretamente com o cabo na placa-mae)
+    use what_to_do("Verifique se o painel da fonte esteja conectado corretamente com o cabo na placa-mae")
     when
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
@@ -27,7 +27,7 @@ what_to_do_make_sure_fonte_panel_switch_to_motherboard_lead_is_connected_to_the_
         questions.checked_motherboard_lead(False)
 
 what_to_do_replace_switch_or_substitute_front_panel_reset_switch_if_available
-    use what_to_do(Substitua o switch ou substitua o switch de reset no painel frontal se disponivel)
+    use what_to_do("Substitua o switch ou substitua o switch de reset no painel frontal se disponivel")
     when
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
@@ -36,7 +36,7 @@ what_to_do_replace_switch_or_substitute_front_panel_reset_switch_if_available
         questions.power_switch_fail(True)
 
 what_to_do_remake_motherboard_power_connections
-    use what_to_do(Refaça a conexao dos cabos da fonte com a placa-mae)
+    use what_to_do("Refaça a conexao dos cabos da fonte com a placa-mae")
     when
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
@@ -46,7 +46,7 @@ what_to_do_remake_motherboard_power_connections
         questions.psu_connections_to_motherboard_correct(False)
 
 what_to_do_defective_power_supply_test_on_2nd_pc_before_discarding
-    use what_to_do(Fonte de alimentação com defeito, teste a fonte em um pc secundário)
+    use what_to_do("Fonte de alimentação com defeito, teste a fonte em um pc secundário")
     when
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
@@ -58,7 +58,7 @@ what_to_do_defective_power_supply_test_on_2nd_pc_before_discarding
         questions.hard_drive_tested_good(True)
 
 what_to_do_try_drive_in_test_pc_or_substitute_known_good_drive_for_testing
-    use what_to_do(Teste o HD em outro pc ou use um HD bom para teste)
+    use what_to_do("Teste o HD em outro pc ou use um HD bom para teste")
     when
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
@@ -69,10 +69,10 @@ what_to_do_try_drive_in_test_pc_or_substitute_known_good_drive_for_testing
         questions.forced_hard_drive_spin_up(False)
         questions.hard_drive_tested_good(false)
 
-// olhar esse daqui
+# olhar esse daqui
 
 what_to_do_strip_system_down_to_video_adapter_only_See_box_A_on_conflict_resolution_chart
-    use what_to_do(strip_system_down_to_video_adapter_only_See_box_A_on_conflict_resolution_chart)
+    use what_to_do("strip_system_down_to_video_adapter_only_See_box_A_on_conflict_resolution_chart")
     when
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
@@ -83,10 +83,10 @@ what_to_do_strip_system_down_to_video_adapter_only_See_box_A_on_conflict_resolut
         questions.forced_hard_drive_spin_up(True)
         questions.bad_adapter_on_bus(True)
 
-//igual what_to_do_defective_power_supply_test_on_2nd_pc_before_discarding?
+# igual what_to_do_defective_power_supply_test_on_2nd_pc_before_discarding?
 
 what_to_do_test_or_replace_power_supply
-    use what_to_do(Teste ou troque a fonte de alimentação)
+    use what_to_do("Teste ou troque a fonte de alimentação")
     when
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
@@ -99,7 +99,7 @@ what_to_do_test_or_replace_power_supply
         questions.powers_motherboard_on_bench(False)
 
 what_to_do_either_you_have_a_short_circuit_in_the_case_or_a_geometry
-    use what_to_do(Ou há um curto circuito no gabinete ou um problema geometrico colocando um estresse inaceitavel na placa-mae. Também é possível que o adaptador de vídeo não foi colocada corretamente, devido a posicao do suporte)
+    use what_to_do("Ou há um curto circuito no gabinete ou um problema geometrico colocando um estresse inaceitavel na placa-mae. Também é possível que o adaptador de vídeo não foi colocada corretamente, devido a posicao do suporte")
     when
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
@@ -112,7 +112,7 @@ what_to_do_either_you_have_a_short_circuit_in_the_case_or_a_geometry
         questions.powers_motherboard_on_bench(True)
 
 what_to_do_premature_power_good_signal_try_different_power_supply
-    use what_to_do(Sinal de energia suficiente prematuramente, teste com outra fonte de alimentacao)
+    use what_to_do("Sinal de energia suficiente prematuramente, teste com outra fonte de alimentacao")
     when 
         questions.power_comes_on(True)
         questions.live_screen(True)
@@ -120,7 +120,7 @@ what_to_do_premature_power_good_signal_try_different_power_supply
         questions.needs_two_tries_to_boot(True)
 
 what_to_do_remove_latest_addition_and_retry
-    use what_to_do(Remova o ultimo hardware instalado e tente novamente.)
+    use what_to_do("Remova o ultimo hardware instalado e tente novamente.")
     when 
         questions.power_comes_on(True)
         questions.live_screen(True)
@@ -130,7 +130,7 @@ what_to_do_remove_latest_addition_and_retry
         questions.new_hardware_installed(True)
 
 what_to_do_age_requires_cleaning_obstruction_non_pwm_fan
-    use what_to_do(Ou o fan pode estar velho, necessitando limpeza, obstruido ou o fan pode nao ser PWM)
+    use what_to_do("Ou o fan pode estar velho, necessitando limpeza, obstruido ou o fan pode nao ser PWM")
     when 
         questions.power_comes_on(True)
         questions.live_screen(True)
@@ -141,9 +141,9 @@ what_to_do_age_requires_cleaning_obstruction_non_pwm_fan
         questions.loud_fan_noise(True)
 
 
-//Nao entendi
+#Nao entendi
 what_to_do_quality_stability_test_power_supply_or_not_a_psu_failure
-    use what_to_do()
+    use what_to_do("ok")
     when 
         questions.power_comes_on(True)
         questions.live_screen(True)

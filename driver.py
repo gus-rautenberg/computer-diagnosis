@@ -21,7 +21,7 @@ def hardware_diagnosis_questions():
     try:
         with engine.prove_goal('rules.what_to_do($action)') as gen: #STUDENTS: you will need to edit this line
             for vars, plan in gen:
-                print("Você precisa executar: %s" % (vars['action'])) #STUDENTS: you will need to edit this line
+                print("Seu diagnostico: %s" % (vars['action'])) #STUDENTS: you will need to edit this line
 
     except Exception:
         # This converts stack frames of generated python functions back to the
