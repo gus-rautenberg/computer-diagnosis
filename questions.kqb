@@ -1,4 +1,11 @@
 # Questions.kqb
+# POWER SUPPLY (PSU) FAILURE
+# Video Failure
+# Motherboard, CPU, RAM Failure
+# Motherboard, CPU, RAM Performance
+# Hard Drive Boot and Performance
+# Network Hardware Diagnostics
+# ATA Drive Failure
 
 # POWER SUPPLY (PSU) FAILURE
 
@@ -386,7 +393,7 @@ cmos_boot_order_set($ans)
 
 # aqui seria OS DVD, USB boot? como não temos mais DVD, ficara so USB
 os_usb_boot($ans)
-    Sistema operacional foi instalado pelo USB ? # seria isso ?
+    Sistema operacional esta no USB ? # seria isso ?
     ---
     $ans = yn
 
@@ -397,7 +404,7 @@ just_switched_to_ahci($ans)
 
 # aqui seria Read in USB shell or after DVD boot, não tera mais o dvd
 read_in_usb_shell($ans)
-    Leu o USB a partir de um shell ? # seria isso ?
+    O sistema opearcional foi instalado pelo USB ? # seria isso ?
     ---
     $ans = yn
 
@@ -471,4 +478,111 @@ raid_performance_recovery($ans)
     ---
     $ans = yn
 
+# Network Hardware Diagnostics
 
+wired_lan($ans)
+    Conexão de internet é por cabo de LAN?
+    ---
+    $ans = yn
+
+pc_see_network($ans)
+    O dispositivo esta conectando a internet?
+    ---
+    $ans = yn
+
+works_unsecured($ans)
+    Conecta a redes desprotegidas ?
+    ---
+    $ans = yn
+
+works_cable_direct($ans)
+    Funciona com cabo de rede?
+    ---
+    $ans = yn
+
+default_settings_on_router($ans)
+    O roteador esta com as configurações padrões?
+    ---
+    $ans = yn
+
+loses_signal_slow($ans)
+    Perde sinal lentamente ? # seria isso?
+    ---
+    $ans = yn
+
+same_bgn($ans)
+    Utiliza o padrão 802.11 (B/G/N)?
+    ---
+    $ans = yn
+
+other_wifi_devices_work($ans)
+    Outros dispositivos estão funcionando no WI-FI?
+    ---
+    $ans = yn
+
+mac_address_firewall($ans)
+    O firewall esta bloqueando o endereço MAC? # seria isso?
+    ---
+    $ans = yn
+
+random_problems($ans)
+    Esta tendo problemas aleatorios?
+    ---
+    $ans = yn
+
+new_hub_added_to_lan($ans)
+    Adicionou um novo hub na LAN?
+    ---
+    $ans = yn
+
+link_light_lit($ans)
+    A luz do link esta acende?
+    ---
+    $ans = yn
+
+copied_network_config($ans)
+    As configurações de rede foram copiadas de outro dispositivo?
+    ---
+    $ans = yn
+    
+device_manager_problem($ans)
+    Problema no gerenciador de dispositivos?
+    ---
+    $ans = yn
+
+tried_different_port_on_hub($ans)
+    Tentou uma porta diferente no hub?
+    ---
+    $asn = yn
+
+fails_on_traffic_number_of_users($ans)
+    Falha quando um certo numero de usuarios utiliza a rede?
+    ---
+    $ans = yn
+
+flaky_off_network_also($ans)
+    O dispositivo apresenta comportamento estranho mesmo não conectado na rede?
+    ---
+    $ans = yn
+
+cable_bypass_to_hub_fix($ans)
+    Tem algum desvio para conexão do cabo ao hub? # seria isso?
+    ---
+    $ans = yn
+
+new_network_card_works($ans)
+    Funciona com uma nova placa de rede?
+    ---
+    $ans = yn
+
+wiggled_cable($ans)
+    Mexeu no cabo?
+    ---
+    $ans = yn
+
+within_physical_layer_limits($ans)
+    A conexão esta no limite fisica da rede?
+    ---
+    $ans = yn
+
+# ATA Drive Failure
