@@ -97,7 +97,7 @@ hard_drive_tested_good($ans)
 # Video Failure
 
 does_system_power_up($ans)
-    Sistema liga?
+    O sistema liga?
     ---
     $ans = yn
 
