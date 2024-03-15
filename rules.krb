@@ -168,6 +168,7 @@ what_to_do_check_monitor_power_source_make_sure_cord_is_fully_seated_in_monitor_
     when 
         questions.power_comes_on(True)
         questions.live_screen(False)
+        questions.does_system_power_up(True)
         questions.monitor_led_on(False)
 
 what_to_do_attach_video_card_power_inside_PC
@@ -183,6 +184,7 @@ what_to_do_try_both_monitor_in_turn_on_primary_try_standard_monitor_in_place_of_
     when 
         questions.power_comes_on(True)
         questions.live_screen(False)
+        questions.does_system_power_up(True)
         questions.monitor_led_on(True)
         questions.dual_monitors(True)
 
@@ -191,6 +193,7 @@ what_to_do_check_both_ends_of_video_cable
     when 
         questions.power_comes_on(True)
         questions.live_screen(False)
+        questions.does_system_power_up(True)
         questions.monitor_led_on(True)
         questions.dual_monitors(False)
         questions.heer_a_string_of_beeps(False)
@@ -201,6 +204,7 @@ what_to_do_reseat_video_adapter_test_in_another_pc_if_posible
     when 
         questions.power_comes_on(True)
         questions.live_screen(False)
+        questions.does_system_power_up(True)
         questions.monitor_led_on(True)
         questions.dual_monitors(False)
         questions.heer_a_string_of_beeps(True)
@@ -211,6 +215,7 @@ what_to_do_reseat_ram_on_motherboard_test_in_another_pc_se_possível
     when 
         questions.power_comes_on(True)
         questions.live_screen(False)
+        questions.does_system_power_up(True)
         questions.monitor_led_on(True)
         questions.dual_monitors(False)
         questions.heer_a_string_of_beeps(True)
@@ -220,8 +225,12 @@ what_to_do_reseat_ram_on_motherboard_test_in_another_pc_se_possível
 what_to_do_replace_or_repair_cable_conector
     use what_to_do("Troque ou repare o conector do cabo")
     when 
+        questions.power_comes_on(True)
+        
         (
             questions.live_screen(False)
+            and
+            questions.does_system_power_up(True)
             and
             questions.monitor_led_on(True)
             and
@@ -235,6 +244,8 @@ what_to_do_replace_or_repair_cable_conector
         (
             questions.live_screen(True)
             and
+            questions.does_system_power_up(True)
+            and
             questions.no_power_displayed(False)
             and
             questions.no_signal_displayed(True)
@@ -242,9 +253,8 @@ what_to_do_replace_or_repair_cable_conector
             questions.cable_damaged_bent_pins(False)
         )
         and
-        questions.power_comes_on(True)
-        and
         questions.video_cable_secure(True)
+
 
 #nao terminei
 

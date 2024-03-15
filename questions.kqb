@@ -96,6 +96,11 @@ hard_drive_tested_good($ans)
 
 # Video Failure
 
+does_system_power_up($ans)
+    Sistema liga?
+    ---
+    $ans = yn
+
 monitor_led_on($ans)
     Led do monitor liga?
     ---
