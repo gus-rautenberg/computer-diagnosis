@@ -153,3 +153,189 @@ what_to_do_quality_stability_test_power_supply_or_not_a_psu_failure
         questions.new_hardware_installed(False)
         questions.loud_fan_noise(False)
         questions.hdd_or_os_error(False)
+
+
+
+# ---------------------------------
+# ||                             ||  
+# ||        VIDEO FAILURE        ||
+# ||                             ||
+# ---------------------------------
+
+
+what_to_do_check_monitor_power_source_make_sure_cord_is_fully_seated_in_monitor_socket
+    use what_to_do("Cheque a fonte de energia do monitor, veja se o cabo está conectado de forma correta.")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.monitor_led_on(False)
+
+what_to_do_attach_video_card_power_inside_PC
+    use what_to_do("Conect a alimentacao de energia da placa de video dentro do pc")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(True)
+        questions.no_power_displayed(True)
+        
+
+what_to_do_try_both_monitor_in_turn_on_primary_try_standard_monitor_in_place_of_hdtv
+    use what_to_do("Teste dois monitores no lugar de um primário ou teste um monitor padrão no lugar de um HDTV")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.monitor_led_on(True)
+        questions.dual_monitors(True)
+
+what_to_do_check_both_ends_of_video_cable
+    use what_to_do("Cheque as duas conexoes do cabo de video")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.monitor_led_on(True)
+        questions.dual_monitors(False)
+        questions.heer_a_string_of_beeps(False)
+        questions.video_cable_secure(False)
+
+what_to_do_reseat_video_adapter_test_in_another_pc_if_posible
+    use what_to_do("Recoloque a placa de video, se possível teste em outro computador compatível.")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.monitor_led_on(True)
+        questions.dual_monitors(False)
+        questions.heer_a_string_of_beeps(True)
+        questions.video_card_seated_tested(False)
+
+what_to_do_reseat_ram_on_motherboard_test_in_another_pc_se_possível
+    use what_to_do("Recoloque a(s) memoria(s) ram, se possível teste em outro computador compatível.")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.monitor_led_on(True)
+        questions.dual_monitors(False)
+        questions.heer_a_string_of_beeps(True)
+        questions.video_card_seated_tested(True)
+        questions.pc_memory_tested(False)
+
+what_to_do_replace_or_repair_cable_conector
+    use what_to_do("Troque ou repare o conector do cabo")
+    when 
+        (
+            questions.live_screen(False)
+            and
+            questions.monitor_led_on(True)
+            and
+            questions.dual_monitors(False)
+            and
+            questions.heer_a_string_of_beeps(False)
+            and
+            questions.cable_damaged_bent_pins(True)
+        )
+        or
+        (
+            questions.live_screen(True)
+            and
+            questions.no_power_displayed(False)
+            and
+            questions.no_signal_displayed(True)
+            and
+            questions.cable_damaged_bent_pins(False)
+        )
+        and
+        questions.power_comes_on(True)
+        and
+        questions.video_cable_secure(True)
+
+#nao terminei
+
+
+# ---------------------------------
+# ||                             ||  
+# ||          ATA DRIVE          ||
+# ||                             ||
+# ---------------------------------
+    #ajuda
+what_to_do_check_cmos_settings_windows_drivers_usb_sdd_driver
+use what_to_do("Cheque as configuracoes CMOS, drivers do Windows,
+USB SSD driver")
+when 
+    questions.bios_register_drive(False)
+    questions.ssd_drive(True)
+    questions.pata_or_sata(False)
+    
+what_to_do_swap_power_lead_test_in_usb_shell_pc
+use what_to_do("Cheque as configuracoes CMOS, drivers do Windows,
+USB SSD driver")
+when 
+    questions.bios_register_drive(False)
+    questions.ssd_drive(False)
+    questions.drive_seek_spin_up(False)
+
+what_to_do_select_master_slave_or_cs_cs_requires_80_conductor_ide_cable
+use what_to_do("Selecione a relação master/slave do disco ou Cable Select(CS),
+CS, necessita de cabo IDE com 80 condutores ou cabo customizado com 40 fios")
+when 
+    questions.bios_register_drive(False)
+    questions.ssd_drive(True)
+    questions.pata_or_sata(True)
+    questions.sata_drive(False)
+    questions.set_master_slave(False)
+    questions.set_cable_select_cs(False)
+
+what_to_do_select_master_slave_or_cs_cs_requires_80_conductor_ide_cable
+use what_to_do("Selecione a relação master/slave do disco ou Cable Select(CS),
+CS, necessita de cabo IDE com 80 condutores ou cabo customizado com 40 fios")
+when 
+    questions.bios_register_drive(False)
+    questions.ssd_drive(False)
+    questios.drive_seek_spin_up(True)
+    questions.sata_drive(False)
+    questions.set_master_slave(False)
+    questions.set_cable_select_cs(False)
+
+
+what_to_do_select_master_slave_or_cs_cs_requires_80_conductor_ide_cable
+    use what_to_do("Selecione a relação master/slave do disco ou Cable Select(CS),
+    CS, necessita de cabo IDE com 80 condutores ou cabo customizado com 40 fios")
+    when 
+        questions.bios_register_drive(False)
+        (
+            (
+                questions.ssd_drive(True)
+                and
+                questions.pata_or_sata(True)
+            )
+            or
+            (
+                questions.drive_seek_spin_up(True)
+                and
+                questions.ssd_drive(False)
+            )
+        )
+        questions.sata_drive(False)
+        questions.set_master_slave(False)
+        questions.set_cable_select_cs(False)
+
+# ---------------------------------
+# ||                             ||  
+# ||     Hard Drive B and P      ||
+# ||                             ||
+# ---------------------------------
+
+# ---------------------------------
+# ||                             ||  
+# ||           NetWork           ||
+# ||                             ||
+# ---------------------------------
+
+# ---------------------------------
+# ||                             ||  
+# ||     Motherboard Failure     ||
+# ||                             ||
+# ---------------------------------
+
+# ---------------------------------
+# ||                             ||  
+# ||   Motherboard Performace    ||
+# ||                             ||
+# ---------------------------------
