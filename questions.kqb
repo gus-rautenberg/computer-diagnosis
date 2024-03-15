@@ -101,6 +101,11 @@ does_system_power_up($ans)
     ---
     $ans = yn
 
+live_screen_video_failure($ans)
+    A tela liga?
+    ---
+    $ans = yn 
+
 monitor_led_on($ans)
     Led do monitor liga?
     ---
@@ -228,6 +233,11 @@ fan_on_heatsink_active($ans)
     $ans = yn
 
 # aqui seria o more than on beep ? mas ja temos uma função hear_more_than_1_beep
+
+more_than_one_beep($ans)
+    Escutou mais de um "beep"?
+    ---
+    $ans = yn
 
 default_motherboard_settings($ans)
     Configuração da placa mãe esta padrão?
