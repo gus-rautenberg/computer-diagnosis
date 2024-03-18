@@ -256,10 +256,192 @@ what_to_do_replace_or_repair_cable_conector2
         questions.video_cable_secure(True)
         questions.cable_damaged_bent_pins(True)
 
+what_to_do_disable_with_motherboard_jumper_switch_or_bios
+    use what_to_do("Desative com o video com o jumper da placa-mae, switch ou configuracoes da bios.")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.does_system_power_up(True)
+        questions.live_screen_video_failure(True)
+        questions.no_power_displayed(False)
+        questions.no_signal_displayed(False)
+        questions.onboard_video_trumps_replacement_adapter(True)
+
+what_to_do_check_backlight_on_lcd_test_monitor_on_good_pc
+    use what_to_do("Confira o backlight do LCD, teste o monitor em outro PC ou notebook")
+    when 
+
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.does_system_power_up(True)
+        questions.monitor_led_on(True)
+        questions.dual_monitors(False)
+        questions.heer_a_string_of_beeps(False)
+        questions.video_cable_secure(True)
+        questions.cable_damaged_bent_pins(False)
+        questions.monitor_tested(False)
+
+what_to_do_check_backlight_on_lcd_test_monitor_on_good_pc2
+    use what_to_do("Confira o backlight do LCD, teste o monitor em outro PC ou notebook")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(True)
+        questions.does_system_power_up(True)
+        questions.no_power_displayed(False)
+        questions.no_signal_displayed(True)
+        questions.video_cable_secure(True)
+        questions.cable_damaged_bent_pins(False)
+        questions.monitor_tested(False)
+
+what_to_do_replace_fan
+    use what_to_do("Troque o fan")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.does_system_power_up(True)
+        questions.live_screen_video_failure(True)
+        questions.no_power_displayed(False)
+        questions.no_signal_displayed(False)
+        questions.onboard_video_trumps_replacement_adapter(False)
+        questions.freezes_on_bios_screen(False)
+        questions.fan_noisy(True)
 
 
+what_to_do_restore_adapters_one_at_a_time_powering_down_and_unplugging_power_supply
+    use what_to_do("Restaure os adaptadores um de cada vez, desligando e desconectando a fonte de alimentacao")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.does_system_power_up(True)
+        questions.live_screen_video_failure(True)
+        questions.no_power_displayed(False)
+        questions.no_signal_displayed(False)
+        questions.onboard_video_trumps_replacement_adapter(False)
+        questions.freezes_on_bios_screen(True)
+        questions.other_adapter_crossfire_sli(True)
+        questions.live_only_with_solo_video_card(True)
 
-#nao terminei
+what_to_do_restore_adapters_one_at_a_time_powering_down_and_unplugging_power_supply1
+    use what_to_do("Restaure os adaptadores um de cada vez, desligando e desconectando a fonte de alimentacao")
+    when 
+
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.does_system_power_up(True)
+        questions.monitor_led_on(True)
+        questions.dual_monitors(False)
+        questions.heer_a_string_of_beeps(False)
+        questions.video_cable_secure(True)
+        questions.cable_damaged_bent_pins(False)
+        questions.monitor_tested(True)
+        questions.other_adapter_crossfire_sli(True)
+        questions.live_only_with_solo_video_card(True)
+
+what_to_do_restore_adapters_one_at_a_time_powering_down_and_unplugging_power_supply2
+    use what_to_do("Restaure os adaptadores um de cada vez, desligando e desconectando a fonte de alimentacao")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(True)
+        questions.does_system_power_up(True)
+        questions.no_power_displayed(False)
+        questions.no_signal_displayed(True)
+        questions.video_cable_secure(True)
+        questions.cable_damaged_bent_pins(False)
+        questions.monitor_tested(True)
+        questions.other_adapter_crossfire_sli(True)
+        questions.live_only_with_solo_video_card(True)
+
+
+what_to_do_try_old_adapter_in_other_system_before_chucking
+    use what_to_do("Teste o adaptador antigo em outro sistema antes de descarta-lo")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.does_system_power_up(True)
+        questions.live_screen_video_failure(True)
+        questions.no_power_displayed(False)
+        questions.no_signal_displayed(False)
+        questions.onboard_video_trumps_replacement_adapter(False)
+        questions.freezes_on_bios_screen(True)
+        questions.other_adapter_crossfire_sli(True)
+        questions.live_only_with_solo_video_card(False)
+        questions.live_only_with_new_video_card(True)
+
+what_to_do_try_old_adapter_in_other_system_before_chucking1
+    use what_to_do("Teste o adaptador antigo em outro sistema antes de descarta-lo")
+    when 
+
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.does_system_power_up(True)
+        questions.monitor_led_on(True)
+        questions.dual_monitors(False)
+        questions.heer_a_string_of_beeps(False)
+        questions.video_cable_secure(True)
+        questions.cable_damaged_bent_pins(False)
+        questions.monitor_tested(True)
+        questions.other_adapter_crossfire_sli(True)
+        questions.live_only_with_solo_video_card(False)
+        questions.live_only_with_new_video_card(True)
+
+what_to_do_try_old_adapter_in_other_system_before_chucking2
+    use what_to_do("Teste o adaptador antigo em outro sistema antes de descarta-lo")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(True)
+        questions.does_system_power_up(True)
+        questions.no_power_displayed(False)
+        questions.no_signal_displayed(True)
+        questions.video_cable_secure(True)
+        questions.cable_damaged_bent_pins(False)
+        questions.monitor_tested(True)
+        questions.other_adapter_crossfire_sli(True)
+        questions.live_only_with_solo_video_card(False)
+        questions.live_only_with_new_video_card(True)
+aaa
+what_to_do_try_old_adapter_in_other_system_before_chucking3
+    use what_to_do("Teste o adaptador antigo em outro sistema antes de descarta-lo")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.does_system_power_up(True)
+        questions.live_screen_video_failure(True)
+        questions.no_power_displayed(False)
+        questions.no_signal_displayed(False)
+        questions.onboard_video_trumps_replacement_adapter(False)
+        questions.freezes_on_bios_screen(True)
+        questions.other_adapter_crossfire_sli(False)
+        questions.live_only_with_new_video_card(True)
+
+what_to_do_try_old_adapter_in_other_system_before_chucking4
+    use what_to_do("Teste o adaptador antigo em outro sistema antes de descarta-lo")
+    when 
+
+        questions.power_comes_on(True)
+        questions.live_screen(False)
+        questions.does_system_power_up(True)
+        questions.monitor_led_on(True)
+        questions.dual_monitors(False)
+        questions.heer_a_string_of_beeps(False)
+        questions.video_cable_secure(True)
+        questions.cable_damaged_bent_pins(False)
+        questions.monitor_tested(True)
+        questions.other_adapter_crossfire_sli(False)
+        questions.live_only_with_new_video_card(True)
+
+what_to_do_try_old_adapter_in_other_system_before_chucking5
+    use what_to_do("Teste o adaptador antigo em outro sistema antes de descarta-lo")
+    when 
+        questions.power_comes_on(True)
+        questions.live_screen(True)
+        questions.does_system_power_up(True)
+        questions.no_power_displayed(False)
+        questions.no_signal_displayed(True)
+        questions.video_cable_secure(True)
+        questions.cable_damaged_bent_pins(False)
+        questions.monitor_tested(True)
+        questions.other_adapter_crossfire_sli(False)
+        questions.live_only_with_new_video_card(True)
 
 
 # ---------------------------------
