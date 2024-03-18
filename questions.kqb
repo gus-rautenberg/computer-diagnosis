@@ -102,7 +102,7 @@ does_system_power_up($ans)
     $ans = yn
 
 live_screen_video_failure($ans)
-    A tela liga?
+    Confirmando, a tela liga?
     ---
     $ans = yn 
 
