@@ -1,3 +1,4 @@
+
 what_to_do_check_power_requirement_vs_rating
     use what_to_do("Cheque a energia necessaria com a energia recebida")
     when 
@@ -206,70 +207,70 @@ what_to_do_reseat_video_adapter_test_in_another_pc_if_posible
         questions.heer_a_string_of_beeps(True)
         questions.video_card_seated_tested(False)
 
-what_to_do_check_both_ends_of_video_cable
-    use what_to_do("Cheque as duas conexoes do cabo de video")
-    when 
-        questions.power_comes_on(True)
-        and
-        ((
-            questions.live_screen(False)
-            and
-            questions.does_system_power_up(True)
-            and
-            questios.live_screen_video_failure(False)
-            and
-            questions.monitor_led_on(True)
-            and
-            questions.dual_monitors(False)
-            and
-            questions.heer_a_string_of_beeps(False)
-        )
-        or
-        (
-            questions.live_screen(False)
-            and
-            questions.does_system_power_up(True)
-            and
-            questios.live_screen_video_failure(True)
-            and
-            questions.no_power_displayed(False)
-            and
-            questions.no_signal_displayed(True)
-        ))
-        and
-        questions.video_cable_secure(False)
+#what_to_do_check_both_ends_of_video_cable
+#    use what_to_do("Cheque as duas conexoes do cabo de video")
+#    when 
+#        questions.power_comes_on(True)
+#
+#        
+ #          (
+#                questions.live_screen(False)
+#                and
+ #               questions.does_system_power_up(True)
+#                and
+#                questios.live_screen_video_failure(False)
+#                and
+#                questions.monitor_led_on(True)
+#                and
+#                questions.dual_monitors(False)
+#                and
+#                questions.heer_a_string_of_beeps(False)
+#            )
+#            or
+#            (
+#                questions.live_screen(False)
+#                and
+#                questions.does_system_power_up(True)
+#                and
+#                questios.live_screen_video_failure(True)
+#                and
+#                questions.no_power_displayed(False)
+#                and
+#                questions.no_signal_displayed(True)
+#            )
+#        
+#        questions.video_cable_secure(False)
 
-what_to_do_replace_or_repair_cable_conector
-    use what_to_do("Troque ou repare o conector do cabo")
-    when 
-        questions.power_comes_on(True)
-        and
-        ((
-            questions.live_screen(False)
-            and
-            questions.does_system_power_up(True)
-            and
-            questions.monitor_led_on(True)
-            and
-            questions.dual_monitors(False)
-            and
-            questions.heer_a_string_of_beeps(False)
-        )
-        or
-        (
-            questions.live_screen(True)
-            and
-            questions.does_system_power_up(True)
-            and
-            questions.no_power_displayed(False)
-            and
-            questions.no_signal_displayed(True)
-            
-        ))
-        and
-        questions.video_cable_secure(True)
-        and
-        questions.cable_damaged_bent_pins(True)
+#what_to_do_replace_or_repair_cable_conector
+#    use what_to_do("Troque ou repare o conector do cabo")
+#    when 
+#        questions.power_comes_on(True)
+#          
+#           (
+#                questions.live_screen(False)
+#                and
+#                questions.does_system_power_up(True)
+#                and
+#                questions.monitor_led_on(True)
+#                and
+#                questions.dual_monitors(False)
+#                and
+#                questions.heer_a_string_of_beeps(False)
+#            )
+#            or
+#            (
+#                questions.live_screen(True)
+#                and
+#                questions.does_system_power_up(True)
+#                and
+#                questions.no_power_displayed(False)
+#                and
+#                questions.no_signal_displayed(True)
+#            
+#        
+#            )  
+#        questions.video_cable_secure(True)
+#        questions.cable_damaged_bent_pins(True)
 
 
 #nao terminei
@@ -277,80 +278,7 @@ what_to_do_replace_or_repair_cable_conector
 
 # ---------------------------------
 # ||                             ||  
-# ||          ATA DRIVE          ||
-# ||                             ||
-# ---------------------------------
-    #ajuda
-what_to_do_check_cmos_settings_windows_drivers_usb_sdd_driver
-use what_to_do("Cheque as configuracoes CMOS, drivers do Windows,
-USB SSD driver")
-when 
-    questions.bios_register_drive(False)
-    questions.ssd_drive(True)
-    questions.pata_or_sata(False)
-    
-what_to_do_swap_power_lead_test_in_usb_shell_pc
-use what_to_do("Cheque as configuracoes CMOS, drivers do Windows,
-USB SSD driver")
-when 
-    questions.bios_register_drive(False)
-    questions.ssd_drive(False)
-    questions.drive_seek_spin_up(False)
-
-what_to_do_select_master_slave_or_cs_cs_requires_80_conductor_ide_cable
-use what_to_do("Selecione a relação master/slave do disco ou Cable Select(CS),
-CS, necessita de cabo IDE com 80 condutores ou cabo customizado com 40 fios")
-when 
-    questions.bios_register_drive(False)
-    questions.ssd_drive(True)
-    questions.pata_or_sata(True)
-    questions.sata_drive(False)
-    questions.set_master_slave(False)
-    questions.set_cable_select_cs(False)
-
-what_to_do_select_master_slave_or_cs_cs_requires_80_conductor_ide_cable
-use what_to_do("Selecione a relação master/slave do disco ou Cable Select(CS),
-CS, necessita de cabo IDE com 80 condutores ou cabo customizado com 40 fios")
-when 
-    questions.bios_register_drive(False)
-    questions.ssd_drive(False)
-    questios.drive_seek_spin_up(True)
-    questions.sata_drive(False)
-    questions.set_master_slave(False)
-    questions.set_cable_select_cs(False)
-
-
-what_to_do_select_master_slave_or_cs_cs_requires_80_conductor_ide_cable
-    use what_to_do("Selecione a relação master/slave do disco ou Cable Select(CS),
-    CS, necessita de cabo IDE com 80 condutores ou cabo customizado com 40 fios")
-    when 
-        questions.bios_register_drive(False)
-        (
-            (
-                questions.ssd_drive(True)
-                and
-                questions.pata_or_sata(True)
-            )
-            or
-            (
-                questions.drive_seek_spin_up(True)
-                and
-                questions.ssd_drive(False)
-            )
-        )
-        questions.sata_drive(False)
-        questions.set_master_slave(False)
-        questions.set_cable_select_cs(False)
-
-# ---------------------------------
-# ||                             ||  
 # ||     Hard Drive B and P      ||
-# ||                             ||
-# ---------------------------------
-
-# ---------------------------------
-# ||                             ||  
-# ||           NetWork           ||
 # ||                             ||
 # ---------------------------------
 

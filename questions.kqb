@@ -607,7 +607,7 @@ bios_register_drive($ans)
     ---
     $ans = yn
 
-ssd_drive($ans)
+ssd_drive_ata_failure($ans)
     O disco é um SSD?
     ---
     $ans = yn
