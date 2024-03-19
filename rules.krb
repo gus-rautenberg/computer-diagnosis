@@ -1074,6 +1074,10 @@ what_to_do_motherboard_or_power_supply_bad1
 what_to_do_make_it_less_hotter
     use what_to_do("Troque o cooler do processaor, melhore a circulação de ar no gabinete ou desabilite o multi-core")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(True)
         questions.clean_power(True)
         questions.cpu_temperature_stable(False)
@@ -1081,6 +1085,10 @@ what_to_do_make_it_less_hotter
 what_to_do_update_BIOS
     use what_to_do("Atualize a BIOS e restaure as configurações ao padrão")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(True)
         questions.clean_power(True)
         questions.ran_scan_system_restore(True)
@@ -1089,6 +1097,10 @@ what_to_do_update_BIOS
 what_to_do_update_video_driver
     use what_to_do("Atualize os drivers de video'")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(True)
         quesYtions.clean_power(True)
         questions.ran_scan_system_restore(True)
@@ -1100,6 +1112,10 @@ what_to_do_update_video_driver
 what_to_do_monitor_GPU_temperature
     use what_to_do("Monitore a temperatura do GPU e verifique se o driver esta atualizado")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(True)
         questions.clean_power(True)
         questions.ran_scan_system_restore(True)
@@ -1112,6 +1128,10 @@ what_to_do_monitor_GPU_temperature
 what_to_do_remove_all_adapters
     use what_to_do("Remova todos os adaptadores, exceto os de vídeo, desconecte todos os periféricos USB e desplugue todos os dispositivos que compartilham")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(True)
         questions.clean_power(True)
         questions.ran_scan_system_restore(True)
@@ -1125,6 +1145,10 @@ what_to_do_remove_all_adapters
 what_to_do_motherboard_cpu_malware
     use what_to_do("Problema de compatibilidade de hardware, software corrompido ou malware")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(True)
         questions.clean_power(True)
         questions.ran_scan_system_restore(True)
@@ -1138,6 +1162,10 @@ what_to_do_motherboard_cpu_malware
 what_to_do_replace_power_suply
     use what_to_do("Troque a fonte")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(True)
         questions.clean_power(True)
         questions.ran_scan_system_restore(True)
@@ -1148,6 +1176,10 @@ what_to_do_replace_power_suply
 what_to_do_download_memory_testing_software
     use what_to_do("Instale um software para teste de memoria")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(True)
         questions.clean_power(True)
         questions.ran_scan_system_restore(True)
@@ -1157,6 +1189,10 @@ what_to_do_download_memory_testing_software
 what_to_do_run_anti_virus1
     use what_to_do("Rode um software de reconhecimento de virus ou malware ou restaure o sistema")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(True)
         questions.clean_power(True)
         questions.ran_scan_system_restore(False)
@@ -1164,12 +1200,20 @@ what_to_do_run_anti_virus1
 what_to_do_UPS_to_protect
     use what_to_do("Ligue o dispositivo em um no break")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(True)
         questions.clean_power(False)
 
 what_to_do_driver_issue
     use what_to_do("Comumente resolvido ao atualizar drivers, principalmente os mais genéricos")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(False)
         questions.forgets_time_cmos_settings(False)
         questions.wont_wake_from_sleep(True)
@@ -1177,6 +1221,10 @@ what_to_do_driver_issue
 what_to_do_run_anti_virus2
     use what_to_do("Rode um software de reconhecimento de virus ou malware ou restaure o sistema")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(False)
         questions.forgets_time_cmos_settings(False)
         questions.wont_wake_from_sleep(False)
@@ -1186,6 +1234,10 @@ what_to_do_run_anti_virus2
 what_to_do_check_compatibility_and_BIOS_update
     use what_to_do("Cheque compatibilidade e atualize a BIOS. Caso não resolva troque o processador")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(False)
         questions.forgets_time_cmos_settings(False)
         questions.wont_wake_from_sleep(False)
@@ -1197,6 +1249,10 @@ what_to_do_check_compatibility_and_BIOS_update
 what_to_do_device_failure
     use what_to_do("Problema relacionado a um dispotivo específico que não está listado neste sistema.")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(False)
         questions.forgets_time_cmos_settings(False)
         questions.wont_wake_from_sleep(False)
@@ -1211,6 +1267,10 @@ what_to_do_device_failure
 what_to_do_attached_components_aproved
     use what_to_do("Confirme se todos os componentes ligados a placa mãe são aprovados pela fabricante")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(False)
         questions.forgets_time_cmos_settings(False)
         questions.wont_wake_from_sleep(False)
@@ -1225,6 +1285,10 @@ what_to_do_attached_components_aproved
 what_to_do_PCI_card_backwards
     use what_to_do("As placas PCI Express são retrocompativeis e podem encaixar em um slot em modo x1")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(False)
         questions.forgets_time_cmos_settings(False)
         questions.wont_wake_from_sleep(False)
@@ -1238,6 +1302,10 @@ what_to_do_PCI_card_backwards
 what_to_do_check_chipset
     use what_to_do("Cheque se o chipset suporta todos os slots de memoria ocupados")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(False)
         questions.forgets_time_cmos_settings(False)
         questions.wont_wake_from_sleep(False)
@@ -1251,6 +1319,10 @@ what_to_do_check_chipset
 what_to_do_ganging_impacts_speed
     use what_to_do("Trabalhar em conjunto impacta na velocidade, caso não estejam a placa mão force as memórias a trabalhar na menor velocidade")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(False)
         questions.forgets_time_cmos_settings(False)
         questions.wont_wake_from_sleep(False)
@@ -1264,6 +1336,10 @@ what_to_do_ganging_impacts_speed
 what_to_do_trust_DTS
     use what_to_do("YSe a placa mão suporta sensores de temperatura digital, de prefêrencia a suas aferições ás da placa mãe")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(False)
         questions.forgets_time_cmos_settings(False)
         questions.wont_wake_from_sleep(False)
@@ -1274,6 +1350,10 @@ what_to_do_trust_DTS
 what_to_do_confirm_exact_match
     use what_to_do("Espere a detecção de drivers e instale o que falta")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(False)
         questions.forgets_time_cmos_settings(False)
         questions.wont_wake_from_sleep(False)
@@ -1282,6 +1362,10 @@ what_to_do_confirm_exact_match
 what_to_do_replace_battery
     use what_to_do("Troque a bateria da placa mãe")
     when
+        questions.which_problem($ans)
+        check $ans in (2,)
+        questions.live_screen_motherboard_failure(True)
+        questions.freezes_on_boot(False)
         questions.random_reboot_or_freeze(False)
         questions.forgets_time_cmos_settings(True)
 
