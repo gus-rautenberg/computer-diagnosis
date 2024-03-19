@@ -1,0 +1,163 @@
+# ---------------------------------
+# ||                             ||  
+# ||     Motherboard Failure     ||
+# ||                             ||
+# ---------------------------------
+
+#1
+what_to_do_restart_psu
+    use what_to_do("Restarte o programa e selecione a opcao de fonte de alimentacao)
+    when 
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(False)
+        questions.power_diagnostic_done(False)
+#2
+what_to_do_return_to_video_failure_diagnostic
+    use what_to_do("Restarte o programa e selecione a opcao de video")
+    when 
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(False)
+        questions.power_diagnostic_done(True)
+        questions.video_diagnostic_done(False)
+#3
+what_to_do_undo_upgrade_confirm_exact_cpu_ram_model_compatible_with_motherboard
+    use what_to_do("Desfaça o upgrade e confirme se os exatos CPU e RAM sao compativeis com a placa-mae")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(False)
+        questions.video_diagnostic_done(True)
+        questions.new_build(True)
+#4
+what_to_do_reseat_ram_minimize_number_of_dimms_positive_lever_lock
+    use what_to_do("Recoloque a ram, minimizse o numero de DIMMs, trave o trava")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(False)
+        questions.new_build(False)
+        questions.ram_reseated(False)
+#5
+what_to_do_reseat_cpu_and_heatsink
+    use what_to_do("Reencaixe o CPU e o dissipador de calor")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(False)
+        questions.ram_reseated(False)
+        questions.cpu_seated_flat(False)
+#6
+what_to_do_restore_one_adapter_or_component_at_a_time_unplugging_or_shutting_off_power_strip
+    use what_to_do("Restaure um adaptador ou componente por vez, ou unplugue e/ou desligue o conector de energia de cada vez. Até que o problema seja identificado")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(True)
+        questions.freezes_bare_bones(False)
+#7
+what_to_do_load_default_from_bios_safe_settings
+    use what_to_do("Carregue consigurações padroes da bios")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.can_you_acess_BIOS(True)
+        questions.cmos_settings_default(False)
+#8
+what_to_do_replace_heatsink_if_not_certified
+    use what_to_do("Troque o dissipador de calor caso nao for compativel, cheque a fonte de alimentacao")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.cmos_settings_default(True)
+        questions.temp_and_voltage_stable(False)
+#9
+what_to_do_check_motherboard_manufacturer_website_swap_or_shuffle_ram
+    use what_to_do("Confira o site do fabricante a placa-mae, troque de posição ou utilize outras memorias ram")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.temp_and_voltage_stable(True)
+        questions.ram_certified(False)
+
+#10
+what_to_do_proceed_to_drive_failure
+    use what_to_do("Restarte o programa e inicie a opção de drive failure.")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.ram_certified(True)
+        questions.boot_from_cd_or_dvd(False)
+
+#11
+what_to_do_proceed_to_drive_failure
+    use what_to_do("Restarte o programa e inicie a opção de HD failure.")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.ram_certified(True)
+        questions.boot_from_cd_or_dvd(True)
+#12        
+what_to_do_remove_motherboard_battery_wait_one_hour
+    use what_to_do("Tire a bateria da placa-mae e espere uma hora")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.bios_settings_change(True)
+#13
+what_to_do_check_fan_power_point_may_not_come_on_instantly_at_boot
+    use what_to_do("Cheque a fonte de energia do fan, pode nao chegar ao dar o boot")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.bios_settings_change(False)
+        questions.fan_on_heatsink_active(False)
+#14
+what_to_do_swap_ram_swap_video
+    use what_to_do("Troque a memoria ram, troque a placa de video")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.fan_on_heatsink_active(True)
+        questions.more_than_one_beep(True)
+#15
+what_to_do_restore_factory_motherboard_settings
+    use what_to_do("Restoure as configuraçoes de fabrica da placa-mae")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.more_than_one_beep(False)
+        questions.default_motherboard_settings(False)
+
+#16
+what_to_do_locate_short_binding_swap_case
+    use what_to_do("locate_short_binding_or_swap_case")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.default_motherboard_settings(True)
+        questions.runs_on_bench(True)
+#17
+what_to_do_bad_cpu_watch_voltage_and_heatsink_on_replacement
+    use what_to_do("CPU ruim, confira a voltagem e o dissipador durante a troca")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.runs_on_bench(False)
+        questions.cpu_swap_work(True)
+#18
+
+what_to_do_motherboard_or_power_supply_bad
+    use what_to_do("placa-mae ou fonte de alimentacao ruins")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.runs_on_bench(False)
+        questions.cpu_swap_work(False)

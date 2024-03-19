@@ -10,10 +10,12 @@
 which_problem($ans)
 	Qual opção se encaixa melhor o seu problema?
 	---
-	$ans = select_1
-		1: Comecar_do_inicio
-		2: Motherboard
-		3: HD
+    $ans = select_1
+        1: Comecar_do_inicio
+        2: Problema_de_video
+        3: Motherboard
+        4: HD
+        5: None of the above
 
 # POWER SUPPLY (PSU) FAILURE
 
@@ -300,6 +302,11 @@ ram_certified($ans)
 
 ram_tested($ans)
     A memoria RAM funciona em outro dispositivo?
+    ---
+    $ans = yn
+
+boot_from_cd_or_dvd($ans)
+    Boot feito pelo cd ou dvd?
     ---
     $ans = yn
 
