@@ -545,235 +545,197 @@ what_to_do_reseat_ram_on_motherboard_test_in_another_pc
         questions.video_card_seated_tested(True)
         questions.pc_memory_tested(False)
 
+
 # ---------------------------------
 # ||                             ||  
 # ||     Hard Drive B and P      ||
 # ||                             ||
 # ---------------------------------
+
+#1 
 what_to_do_set_order_to_hard_drive_first_or_remove_other_media
     use what_to_do("Defina a ordem do disco como primeiro, ou remova outra midia")
     when
 
         questions.which_problem($ans)
-        check $ans in (3, )
+        check $ans in (4, )
         questions.os_on_drive_boots(False)
         questions.cmos_boot_order_set(False)
 
-what_to_do_drivers_important_for_sata_interface_performance
-    use what_to_do("Instale os drivers importantes para o funcionamento adequado do SATA")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
-        questions.slow_or_noisy(True)
-        questions.sata_drivers_installed(False)
-
-what_to_do_virus_or_os_corruption_back_up_critical_data_try_virus_doctor_and_os_repair
-    use what_to_do("Ocorreu uma corrupção de virus ou no sistema operacional. Faça backup dos seus dados e utilize um antivirus e/ou um reparo no sistema operacional")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(False)
-        questions.cmos_boot_order_set(True)
-        questions.os_usb_boot(True)
-        questions.just_switched_to_ahci(False)
-        questions.read_in_usb_shell(True)
-
-what_to_do_os_recovery_or_reinstall_if_that_fails_try_deleting_partition_through_disk_management_or_fdisk
-    use what_to_do("Recupere ou reinstale o sistema operacional. Se isso falhar, tente excluir a partição atraves do gerenciamento de disco ou fdisk")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(False)
-        questions.cmos_boot_order_set(True)
-        questions.os_usb_boot(True)
-        questions.just_switched_to_ahci(False)
-        questions.read_in_usb_shell(False)
-        questions.have_good_back_up(True)
-
-what_to_do_if_data_is_critical_try_virus_and_disk_doctor_software_or_send_drive_for_data_recovery
-    use what_to_do("se os dados estiverm críticos, execute um antivírus ou faça uma recuperação do disco")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(False)
-        questions.cmos_boot_order_set(True)
-        questions.os_usb_boot(True)
-        questions.just_switched_to_ahci(False)
-        questions.read_in_usb_shell(False)
-        questions.have_good_back_up(False)
-
+#2
 what_to_do_revert_edit_registry_reset_ahci_in_bios
     use what_to_do("Redefina a AHCI na BIOS")
     when
         questions.which_problem($ans)
-        check $ans in (3, )
+        check $ans in (4, )
         questions.os_on_drive_boots(False)
-        questions.cmos_boot_order_set(True)
         questions.os_usb_boot(True)
         questions.just_switched_to_ahci(True)
 
+#3
+what_to_do_virus_or_os_corruption_back_up_critical_data_try_virus_doctor_and_os_repair
+    use what_to_do("Ocorreu uma corrupção de virus ou no sistema operacional. Faça backup dos seus dados e utilize um antivirus e/ou um reparo no sistema operacional")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.os_on_drive_boots(False)
+        questions.just_switched_to_ahci(False)
+        questions.read_in_usb_shell(True)
+
+#4
+what_to_do_os_recovery_or_reinstall_if_that_fails_try_deleting_partition_through_disk_management_or_fdisk
+    use what_to_do("Recupere ou reinstale o sistema operacional. Se isso falhar, tente excluir a partição atraves do gerenciamento de disco ou fdisk")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.os_on_drive_boots(False)
+        questions.read_in_usb_shell(False)
+        questions.have_good_back_up(True)
+
+#5
+what_to_do_if_data_is_critical_try_virus_and_disk_doctor_software_or_send_drive_for_data_recovery
+    use what_to_do("se os dados estiverm críticos, execute um antivírus ou faça uma recuperação do disco")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.os_on_drive_boots(False)
+        questions.read_in_usb_shell(False)
+        questions.have_good_back_up(False)
+    
+#6
 what_to_do_check_cmos_and_os_power_management_try_in_test_pc
     use what_to_do("Verifique o gerenciamento de energia do CMOS e do sistema operacional, experimente em outro Computador")
     when
         questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
+        check $ans in (4, )
         questions.slow_or_noisy(False)
         questions.cycles_on_and_off(True)
 
-what_to_do_slow_boot_most_often_scheduled_virus_scans
-    use what_to_do("A verificação de virus geralmente pode causar a inicialização lenta")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
-        questions.slow_or_noisy(True)
-        questions.sata_drivers_installed(True)
-        questions.scans_scheduled(True)
-
-what_to_do_delete_files_to_make_room_or_add_new_drive
-    use what_to_do("Exclua alguns arquivos para criar espaço ou adicione um novo disco")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
-        questions.slow_or_noisy(True)
-        questions.sata_drivers_installed(True)   
-        questions.scans_scheduled(False)
-        questions.ten_per_cent_or_more_free_space(False)
-    
-what_to_do_check_cmos_that_best_bios_settings_for_interface_selected
-    use what_to_do("Verifique no CMOS se as melhores configurações da BIOS,para a interface em questão, estão selecionadas")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
-        questions.slow_or_noisy(True)
-        questions.sata_drivers_installed(True)   
-        questions.scans_scheduled(False)
-        questions.ten_per_cent_or_more_free_space(True)
-        questions.ahci_for_sata_dma_for_pata(False)
-
-what_to_do_brand_new_ssd_drive_performance_when_new_and_empty_will_slow_with_time_and_data
-    use what_to_do("O desempenho de um novo SSD, diminui com o tempo e com seu uso")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
-        questions.slow_or_noisy(True)
-        questions.sata_drivers_installed(True)   
-        questions.scans_scheduled(False)
-        questions.ten_per_cent_or_more_free_space(True)
-        questions.ahci_for_sata_dma_for_pata(True)
-        questions.ssd_drive(True)
-        questions.new_drive(True)
-
-what_to_do_do_not_defrag_lower_temperature_update_drivers
-    use what_to_do("Não desfragmente, abaixe a temperatura e atualize os drivers")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
-        questions.slow_or_noisy(True)
-        questions.sata_drivers_installed(True)   
-        questions.scans_scheduled(False)
-        questions.ten_per_cent_or_more_free_space(True)
-        questions.ahci_for_sata_dma_for_pata(True)
-        questions.ssd_drive(True)
-        questions.new_drive(False)
-        questions.tweaked_settings(True)
-
-what_to_do_enable_trim_disable_boost_options_for_magnetic_drivers
-    use what_to_do("Habilite o TRIM e desabilite as opções de boost para discos magneticos")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
-        questions.slow_or_noisy(True)
-        questions.sata_drivers_installed(True)   
-        questions.scans_scheduled(False)
-        questions.ten_per_cent_or_more_free_space(True)
-        questions.ahci_for_sata_dma_for_pata(True)
-        questions.ssd_drive(True)
-        questions.new_drive(False)
-        questions.tweaked_settings(False)
-
-what_to_do_run_chkdsk_or_scandisk_and_defrag
-    use what_to_do("Execute o CHKDSK ou Scandisk e desfragmente")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
-        questions.slow_or_noisy(True)
-        questions.sata_drivers_installed(True)   
-        questions.scans_scheduled(False)
-        questions.ten_per_cent_or_more_free_space(True)
-        questions.ahci_for_sata_dma_for_pata(True)
-        questions.ssd_drive(False)
-        questions.ran_scandisk_and_defrag(False)
-
-what_to_do_may_last_a_long_time_with_rotation_noise_but_keep_backups
-    use what_to_do("O disco pode funcionar ainda com ruidos quando ocorre a rotação, mas por precaução mantenha um backup")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
-        questions.slow_or_noisy(True)
-        questions.sata_drivers_installed(True)   
-        questions.scans_scheduled(False)
-        questions.ten_per_cent_or_more_free_space(True)
-        questions.ahci_for_sata_dma_for_pata(True)
-        questions.ssd_drive(False)
-        questions.ran_scandisk_and_defrag(True)
-        questions.drive_always_noisy(True)
-
-what_to_do_check_for_presence_of_starforce_or_other_third_party_sata_drivers_see_other_flowcharts
-    use what_to_do("Verifique se a presença de Starforce ou outros drivers de SATA de terceiros")
-    when
-        questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
-        questions.slow_or_noisy(True)
-        questions.sata_drivers_installed(True)   
-        questions.scans_scheduled(False)
-        questions.ten_per_cent_or_more_free_space(True)
-        questions.ahci_for_sata_dma_for_pata(True)
-        questions.ssd_drive(False)
-        questions.ran_scandisk_and_defrag(True)
-        questions.drive_always_noisy(False)
-
+#7
 what_to_do_check_for_virus_replace_data_cable_reduce_heat_increase_free_space
     use what_to_do("Verifique se o dispositivo não esta com virus. Subistitua o cabo de dados, diminua a temperatura e aumente o espaço de armazenamento")
     when
         questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
+        check $ans in (4, )
         questions.slow_or_noisy(False)
         questions.cycles_on_and_off(False)
         questions.data_or_smart_errors(True)
 
+#8
 what_to_do_striping_for_speed_vs_realiability_enable_in_bios_rebuild_fail_tolerant_raid_with_new_drive_see_text
     use what_to_do("Divida a configuração do RAID para velocidade e confiabilidade, para habilitar é na BIOS.Reconstrua uma RAID tolerante a falhas com uma nova unidade")
     when
         questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
+        check $ans in (4, )
         questions.slow_or_noisy(False)
-        questions.cycles_on_and_off(False)
         questions.data_or_smart_errors(False)
         questions.raid_performance_recovery(True)
 
+#9
 what_to_do_check_for_presence_of_starforce_or_other_third_party_sata_drivers_see_other_flowcharts_2
     use what_to_do("Verifique se a presença de Starforce ou outros drivers de SATA de terceiros")
     when
         questions.which_problem($ans)
-        check $ans in (3, )
-        questions.os_on_drive_boots(True)
+        check $ans in (4, )
         questions.slow_or_noisy(False)
-        questions.cycles_on_and_off(False)
         questions.data_or_smart_errors(False)
         questions.raid_performance_recovery(False)
+
+#10
+what_to_do_drivers_important_for_sata_interface_performance
+    use what_to_do("Instale os drivers importantes para o funcionamento adequado do SATA")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.slow_or_noisy(True)
+        questions.sata_drivers_installed(False)
+
+#11
+what_to_do_slow_boot_most_often_scheduled_virus_scans
+    use what_to_do("A verificação de virus geralmente pode causar a inicialização lenta")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.sata_drivers_installed(True)
+        questions.scans_scheduled(True)
+
+#12
+what_to_do_delete_files_to_make_room_or_add_new_drive
+    use what_to_do("Exclua alguns arquivos para criar espaço ou adicione um novo disco")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.scans_scheduled(False)
+        questions.ten_per_cent_or_more_free_space(False)
+
+#13
+what_to_do_check_cmos_that_best_bios_settings_for_interface_selected
+    use what_to_do("Verifique no CMOS se as melhores configurações da BIOS,para a interface em questão, estão selecionadas")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.ten_per_cent_or_more_free_space(True)
+        questions.ahci_for_sata_dma_for_pata(False)
+
+#14
+what_to_do_brand_new_ssd_drive_performance_when_new_and_empty_will_slow_with_time_and_data
+    use what_to_do("O desempenho de um novo SSD, diminui com o tempo e com seu uso")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.ssd_drive(True)
+        questions.new_drive(True)
+
+#15
+what_to_do_do_not_defrag_lower_temperature_update_drivers
+    use what_to_do("Não desfragmente, abaixe a temperatura e atualize os drivers")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.ssd_drive(True)
+        questions.new_drive(False)
+        questions.tweaked_settings(True)
+
+#16
+what_to_do_enable_trim_disable_boost_options_for_magnetic_drivers
+    use what_to_do("Habilite o TRIM e desabilite as opções de boost para discos magneticos")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.ssd_drive(True)
+        questions.new_drive(False)
+        questions.tweaked_settings(False)
+
+#17
+what_to_do_run_chkdsk_or_scandisk_and_defrag
+    use what_to_do("Execute o CHKDSK ou Scandisk e desfragmente")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.ssd_drive(False)
+        questions.ran_scandisk_and_defrag(False)
+
+#18
+what_to_do_may_last_a_long_time_with_rotation_noise_but_keep_backups
+    use what_to_do("O disco pode funcionar ainda com ruidos quando ocorre a rotação, mas por precaução mantenha um backup")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.ssd_drive(False)
+        questions.ran_scandisk_and_defrag(True)
+        questions.drive_always_noisy(True)
+
+#19
+what_to_do_check_for_presence_of_starforce_or_other_third_party_sata_drivers_see_other_flowcharts
+    use what_to_do("Verifique se a presença de Starforce ou outros drivers de SATA de terceiros")
+    when
+        questions.which_problem($ans)
+        check $ans in (4, )
+        questions.ssd_drive(False)
+        questions.ran_scandisk_and_defrag(True)
+        questions.drive_always_noisy(False)
+
+
     
 # ---------------------------------
 # ||                             ||  
