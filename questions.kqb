@@ -305,7 +305,7 @@ random_reboot_or_freeze($ans)
     $ans = yn
 
 clean_power($ans)
-    Energia chega de forma limpa? # seria isso ?
+    Energia chega sem oscilação?
     ---
     $ans = yn
 
@@ -314,15 +314,15 @@ cpu_temperature_stable($ans)
     ---
     $ans = yn
 
-# mais uma vez vou tranformar em duas perguntas ran scan, system restore?
-
-ran_scan($ans)
-    Escaneou o dispositivo?
+high_cpu_temp($ans)
+    A temperatura do processador está alta?
     ---
     $ans = yn
 
-system_restore($ans)
-    Restaurou o sistema?
+# mais uma vez vou tranformar em duas perguntas ran scan, system restore?
+
+ran_scan_system_restore($ans)
+    Escaneou o dispositivo e restaurou o sistema?
     ---
     $ans = yn
 
