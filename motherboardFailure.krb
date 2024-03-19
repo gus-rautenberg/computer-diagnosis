@@ -6,7 +6,7 @@
 
 #1
 what_to_do_restart_psu
-    use what_to_do("Restarte o programa e selecione a opcao de fonte de alimentacao)
+    use what_to_do("Restarte o programa e selecione a opcao de fonte de alimentacao")
     when 
         questions.which_problem($ans)
         check $ans in (3,)
