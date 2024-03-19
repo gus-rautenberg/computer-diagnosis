@@ -1,7 +1,9 @@
 
 what_to_do_check_power_requirement_vs_rating
     use what_to_do("Cheque a energia necessaria com a energia recebida")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(True)
         questions.new_build(True)
@@ -9,12 +11,16 @@ what_to_do_check_power_requirement_vs_rating
 what_to_do_connect_to_know_good_outlet
     use what_to_do("Conecte com uma fonte de energia confiável/já testada")
     when
+        questions.which_problem($ans)
+        check $ans in (1,)
         questions.power_comes_on(False)
         questions.ac_power_source_tested(False)
 
 what_to_do_select_proper_voltage_on_rear_of_power_suply
     use what_to_do("Seleciona a voltagem correta na parte traseira da fonte")
     when
+        questions.which_problem($ans)
+        check $ans in (1,)
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
         questions.psu_universal_input(False)
@@ -22,6 +28,8 @@ what_to_do_select_proper_voltage_on_rear_of_power_suply
 what_to_do_make_sure_fonte_panel_switch_to_motherboard_lead_is_connected_to_the_proper_point
     use what_to_do("Verifique se o painel da fonte esteja conectado corretamente com o cabo na placa-mae")
     when
+        questions.which_problem($ans)
+        check $ans in (1,)
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
         questions.psu_universal_input(True)
@@ -30,6 +38,8 @@ what_to_do_make_sure_fonte_panel_switch_to_motherboard_lead_is_connected_to_the_
 what_to_do_replace_switch_or_substitute_front_panel_reset_switch_if_available
     use what_to_do("Substitua o switch ou substitua o switch de reset no painel frontal se disponivel")
     when
+        questions.which_problem($ans)
+        check $ans in (1,)
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
         questions.psu_universal_input(True)
@@ -39,6 +49,8 @@ what_to_do_replace_switch_or_substitute_front_panel_reset_switch_if_available
 what_to_do_remake_motherboard_power_connections
     use what_to_do("Refaça a conexao dos cabos da fonte com a placa-mae")
     when
+        questions.which_problem($ans)
+        check $ans in (1,)
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
         questions.psu_universal_input(True)
@@ -49,6 +61,8 @@ what_to_do_remake_motherboard_power_connections
 what_to_do_defective_power_supply_test_on_2nd_pc_before_discarding
     use what_to_do("Fonte de alimentação com defeito, teste a fonte em um pc secundário")
     when
+        questions.which_problem($ans)
+        check $ans in (1,)
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
         questions.psu_universal_input(True)
@@ -61,6 +75,8 @@ what_to_do_defective_power_supply_test_on_2nd_pc_before_discarding
 what_to_do_try_drive_in_test_pc_or_substitute_known_good_drive_for_testing
     use what_to_do("Teste o HD em outro pc ou use um HD bom para teste")
     when
+        questions.which_problem($ans)
+        check $ans in (1,)
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
         questions.psu_universal_input(True)
@@ -75,6 +91,8 @@ what_to_do_try_drive_in_test_pc_or_substitute_known_good_drive_for_testing
 what_to_do_strip_system_down_to_video_adapter_only_See_box_A_on_conflict_resolution_chart
     use what_to_do("strip_system_down_to_video_adapter_only_See_box_A_on_conflict_resolution_chart")
     when
+        questions.which_problem($ans)
+        check $ans in (1,)
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
         questions.psu_universal_input(True)
@@ -89,6 +107,8 @@ what_to_do_strip_system_down_to_video_adapter_only_See_box_A_on_conflict_resolut
 what_to_do_test_or_replace_power_supply
     use what_to_do("Teste ou troque a fonte de alimentação")
     when
+        questions.which_problem($ans)
+        check $ans in (1,)
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
         questions.psu_universal_input(True)
@@ -102,6 +122,8 @@ what_to_do_test_or_replace_power_supply
 what_to_do_either_you_have_a_short_circuit_in_the_case_or_a_geometry
     use what_to_do("Ou há um curto circuito no gabinete ou um problema geometrico colocando um estresse inaceitavel na placa-mae. Também é possível que o adaptador de vídeo não foi colocada corretamente, devido a posicao do suporte")
     when
+        questions.which_problem($ans)
+        check $ans in (1,)
         questions.power_comes_on(False)
         questions.ac_power_source_tested(True)
         questions.psu_universal_input(True)
@@ -114,7 +136,9 @@ what_to_do_either_you_have_a_short_circuit_in_the_case_or_a_geometry
 
 what_to_do_premature_power_good_signal_try_different_power_supply
     use what_to_do("Sinal de energia suficiente prematuramente, teste com outra fonte de alimentacao")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(True)
         questions.new_build(False)
@@ -122,7 +146,9 @@ what_to_do_premature_power_good_signal_try_different_power_supply
 
 what_to_do_remove_latest_addition_and_retry
     use what_to_do("Remova o ultimo hardware instalado e tente novamente.")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(True)
         questions.new_build(False)
@@ -132,7 +158,9 @@ what_to_do_remove_latest_addition_and_retry
 
 what_to_do_age_requires_cleaning_obstruction_non_pwm_fan
     use what_to_do("Ou o fan pode estar velho, necessitando limpeza, obstruido ou o fan pode nao ser PWM")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(True)
         questions.new_build(False)
@@ -145,7 +173,9 @@ what_to_do_age_requires_cleaning_obstruction_non_pwm_fan
 #Nao entendi
 what_to_do_quality_stability_test_power_supply_or_not_a_psu_failure
     use what_to_do("ok")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(True)
         questions.new_build(False)
@@ -166,7 +196,9 @@ what_to_do_quality_stability_test_power_supply_or_not_a_psu_failure
 
 what_to_do_check_monitor_power_source_make_sure_cord_is_fully_seated_in_monitor_socket
     use what_to_do("Cheque a fonte de energia do monitor, veja se o cabo está conectado de forma correta.")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -175,7 +207,9 @@ what_to_do_check_monitor_power_source_make_sure_cord_is_fully_seated_in_monitor_
 
 what_to_do_attach_video_card_power_inside_PC
     use what_to_do("Conect a alimentacao de energia da placa de video dentro do pc")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -185,7 +219,9 @@ what_to_do_attach_video_card_power_inside_PC
 
 what_to_do_try_both_monitor_in_turn_on_primary_try_standard_monitor_in_place_of_hdtv
     use what_to_do("Teste dois monitores no lugar de um primário ou teste um monitor padrão no lugar de um HDTV")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -197,7 +233,9 @@ what_to_do_try_both_monitor_in_turn_on_primary_try_standard_monitor_in_place_of_
 
 what_to_do_reseat_video_adapter_test_in_another_pc_if_posible
     use what_to_do("Recoloque a placa de video, se possível teste em outro computador compatível.")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -209,7 +247,9 @@ what_to_do_reseat_video_adapter_test_in_another_pc_if_posible
 
 what_to_do_check_both_ends_of_video_cable
     use what_to_do("Cheque as duas conexoes do cabo de video")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -221,7 +261,9 @@ what_to_do_check_both_ends_of_video_cable
 
 what_to_do_check_both_ends_of_video_cable2
     use what_to_do("Cheque as duas conexoes do cabo de video")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -234,7 +276,9 @@ what_to_do_check_both_ends_of_video_cable2
 
 what_to_do_replace_or_repair_cable_conector
     use what_to_do("Troque ou repare o conector do cabo")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
 
         questions.power_comes_on(True)
         questions.live_screen(False)
@@ -247,7 +291,9 @@ what_to_do_replace_or_repair_cable_conector
 
 what_to_do_replace_or_repair_cable_conector2
     use what_to_do("Troque ou repare o conector do cabo")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(True)
         questions.does_system_power_up(True)
@@ -258,7 +304,9 @@ what_to_do_replace_or_repair_cable_conector2
 
 what_to_do_disable_with_motherboard_jumper_switch_or_bios
     use what_to_do("Desative com o video com o jumper da placa-mae, switch ou configuracoes da bios.")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -269,7 +317,9 @@ what_to_do_disable_with_motherboard_jumper_switch_or_bios
 
 what_to_do_check_backlight_on_lcd_test_monitor_on_good_pc
     use what_to_do("Confira o backlight do LCD, teste o monitor em outro PC ou notebook")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
 
         questions.power_comes_on(True)
         questions.live_screen(False)
@@ -283,7 +333,9 @@ what_to_do_check_backlight_on_lcd_test_monitor_on_good_pc
 
 what_to_do_check_backlight_on_lcd_test_monitor_on_good_pc2
     use what_to_do("Confira o backlight do LCD, teste o monitor em outro PC ou notebook")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(True)
         questions.does_system_power_up(True)
@@ -295,7 +347,9 @@ what_to_do_check_backlight_on_lcd_test_monitor_on_good_pc2
 
 what_to_do_replace_fan
     use what_to_do("Troque o fan")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -308,7 +362,9 @@ what_to_do_replace_fan
 
 what_to_do_video_performance_problem
     use what_to_do("Problema com a performance da placa de video")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -322,7 +378,9 @@ what_to_do_video_performance_problem
 
 what_to_do_restore_adapters_one_at_a_time_powering_down_and_unplugging_power_supply
     use what_to_do("Restaure os adaptadores um de cada vez, desligando e desconectando a fonte de alimentacao")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -336,7 +394,9 @@ what_to_do_restore_adapters_one_at_a_time_powering_down_and_unplugging_power_sup
 
 what_to_do_restore_adapters_one_at_a_time_powering_down_and_unplugging_power_supply1
     use what_to_do("Restaure os adaptadores um de cada vez, desligando e desconectando a fonte de alimentacao")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
 
         questions.power_comes_on(True)
         questions.live_screen(False)
@@ -352,7 +412,9 @@ what_to_do_restore_adapters_one_at_a_time_powering_down_and_unplugging_power_sup
 
 what_to_do_restore_adapters_one_at_a_time_powering_down_and_unplugging_power_supply2
     use what_to_do("Restaure os adaptadores um de cada vez, desligando e desconectando a fonte de alimentacao")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(True)
         questions.does_system_power_up(True)
@@ -367,7 +429,9 @@ what_to_do_restore_adapters_one_at_a_time_powering_down_and_unplugging_power_sup
 
 what_to_do_try_old_adapter_in_other_system_before_chucking
     use what_to_do("Teste o adaptador antigo em outro sistema antes de descarta-lo")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -382,7 +446,9 @@ what_to_do_try_old_adapter_in_other_system_before_chucking
 
 what_to_do_try_old_adapter_in_other_system_before_chucking1
     use what_to_do("Teste o adaptador antigo em outro sistema antes de descarta-lo")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
 
         questions.power_comes_on(True)
         questions.live_screen(False)
@@ -399,7 +465,9 @@ what_to_do_try_old_adapter_in_other_system_before_chucking1
 
 what_to_do_try_old_adapter_in_other_system_before_chucking2
     use what_to_do("Teste o adaptador antigo em outro sistema antes de descarta-lo")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(True)
         questions.does_system_power_up(True)
@@ -414,7 +482,9 @@ what_to_do_try_old_adapter_in_other_system_before_chucking2
 
 what_to_do_try_old_adapter_in_other_system_before_chucking3
     use what_to_do("Teste o adaptador antigo em outro sistema antes de descarta-lo")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -428,7 +498,9 @@ what_to_do_try_old_adapter_in_other_system_before_chucking3
 
 what_to_do_try_old_adapter_in_other_system_before_chucking4
     use what_to_do("Teste o adaptador antigo em outro sistema antes de descarta-lo")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
 
         questions.power_comes_on(True)
         questions.live_screen(False)
@@ -444,7 +516,9 @@ what_to_do_try_old_adapter_in_other_system_before_chucking4
 
 what_to_do_try_old_adapter_in_other_system_before_chucking5
     use what_to_do("Teste o adaptador antigo em outro sistema antes de descarta-lo")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(True)
         questions.does_system_power_up(True)
@@ -458,7 +532,9 @@ what_to_do_try_old_adapter_in_other_system_before_chucking5
 
 what_to_do_reseat_ram_on_motherboard_test_in_another_pc
     use what_to_do("Recoloque a memoria ram na placa-mae ou teste em outro pc.")
-    when 
+    when
+        questions.which_problem($ans)
+        check $ans in (1,) 
         questions.power_comes_on(True)
         questions.live_screen(False)
         questions.does_system_power_up(True)
@@ -474,34 +550,250 @@ what_to_do_reseat_ram_on_motherboard_test_in_another_pc
 # ||     Hard Drive B and P      ||
 # ||                             ||
 # ---------------------------------
+what_to_do_set_order_to_hard_drive_first_or_remove_other_media
+    use what_to_do("Defina a ordem do disco como primeiro, ou remova outra midia")
+    when
+
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(False)
+
+what_to_do_drivers_important_for_sata_interface_performance
+    use what_to_do("Instale os drivers importantes para o funcionamento adequado do SATA")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(True)
+        questions.sata_drivers_installed(False)
+
+what_to_do_virus_or_os_corruption_back_up_critical_data_try_virus_doctor_and_os_repair
+    use what_to_do("Ocorreu uma corrupção de virus ou no sistema operacional. Faça backup dos seus dados e utilize um antivirus e/ou um reparo no sistema operacional")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(True)
+        questions.just_switched_to_ahci(False)
+        questions.read_in_usb_shell(True)
+
+what_to_do_os_recovery_or_reinstall_if_that_fails_try_deleting_partition_through_disk_management_or_fdisk
+    use what_to_do("Recupere ou reinstale o sistema operacional. Se isso falhar, tente excluir a partição atraves do gerenciamento de disco ou fdisk")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(True)
+        questions.just_switched_to_ahci(False)
+        questions.read_in_usb_shell(False)
+        questions.have_good_back_up(True)
+
+what_to_do_if_data_is_critical_try_virus_and_disk_doctor_software_or_send_drive_for_data_recovery
+    use what_to_do("se os dados estiverm críticos, execute um antivírus ou faça uma recuperação do disco")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(True)
+        questions.just_switched_to_ahci(False)
+        questions.read_in_usb_shell(False)
+        questions.have_good_back_up(False)
+
+what_to_do_revert_edit_registry_reset_ahci_in_bios
+    use what_to_do("Redefina a AHCI na BIOS")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(True)
+        questions.just_switched_to_ahci(True)
+
+what_to_do_check_cmos_and_os_power_management_try_in_test_pc
+    use what_to_do("Verifique o gerenciamento de energia do CMOS e do sistema operacional, experimente em outro Computador")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(False)
+        questions.cycles_on_and_off(True)
+
+what_to_do_slow_boot_most_often_scheduled_virus_scans
+    use what_to_do("A verificação de virus geralmente pode causar a inicialização lenta")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(True)
+        questions.sata_drivers_installed(True)
+        questions.scans_scheduled(True)
+
+what_to_do_delete_files_to_make_room_or_add_new_drive
+    use what_to_do("Exclua alguns arquivos para criar espaço ou adicione um novo disco")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(True)
+        questions.sata_drivers_installed(True)   
+        questions.scans_scheduled(False)
+        questions.ten_per_cent_or_more_free_space(False)
+    
+what_to_do_check_cmos_that_best_bios_settings_for_interface_selected
+    use what_to_do("Verifique no CMOS se as melhores configurações da BIOS,para a interface em questão, estão selecionadas")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(True)
+        questions.sata_drivers_installed(True)   
+        questions.scans_scheduled(False)
+        questions.ten_per_cent_or_more_free_space(True)
+        questions.ahci_for_sata_dma_for_pata(False)
+
+what_to_do_brand_new_ssd_drive_performance_when_new_and_empty_will_slow_with_time_and_data
+    use what_to_do("O desempenho de um novo SSD, diminui com o tempo e com seu uso")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(True)
+        questions.sata_drivers_installed(True)   
+        questions.scans_scheduled(False)
+        questions.ten_per_cent_or_more_free_space(True)
+        questions.ahci_for_sata_dma_for_pata(True)
+        questions.ssd_drive(True)
+        questions.new_drive(True)
+
+what_to_do_do_not_defrag_lower_temperature_update_drivers
+    use what_to_do("Não desfragmente, abaixe a temperatura e atualize os drivers")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(True)
+        questions.sata_drivers_installed(True)   
+        questions.scans_scheduled(False)
+        questions.ten_per_cent_or_more_free_space(True)
+        questions.ahci_for_sata_dma_for_pata(True)
+        questions.ssd_drive(True)
+        questions.new_drive(False)
+        questions.tweaked_settings(True)
+
+what_to_do_enable_trim_disable_boost_options_for_magnetic_drivers
+    use what_to_do("Habilite o TRIM e desabilite as opções de boost para discos magneticos")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(True)
+        questions.sata_drivers_installed(True)   
+        questions.scans_scheduled(False)
+        questions.ten_per_cent_or_more_free_space(True)
+        questions.ahci_for_sata_dma_for_pata(True)
+        questions.ssd_drive(True)
+        questions.new_drive(False)
+        questions.tweaked_settings(False)
+
+what_to_do_run_chkdsk_or_scandisk_and_defrag
+    use what_to_do("Execute o CHKDSK ou Scandisk e desfragmente")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(True)
+        questions.sata_drivers_installed(True)   
+        questions.scans_scheduled(False)
+        questions.ten_per_cent_or_more_free_space(True)
+        questions.ahci_for_sata_dma_for_pata(True)
+        questions.ssd_drive(False)
+        questions.ran_scandisk_and_defrag(False)
+
+what_to_do_may_last_a_long_time_with_rotation_noise_but_keep_backups
+    use what_to_do("O disco pode funcionar ainda com ruidos quando ocorre a rotação, mas por precaução mantenha um backup")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(True)
+        questions.sata_drivers_installed(True)   
+        questions.scans_scheduled(False)
+        questions.ten_per_cent_or_more_free_space(True)
+        questions.ahci_for_sata_dma_for_pata(True)
+        questions.ssd_drive(False)
+        questions.ran_scandisk_and_defrag(True)
+        questions.drive_always_noisy(True)
+
+what_to_do_check_for_presence_of_starforce_or_other_third_party_sata_drivers_see_other_flowcharts
+    use what_to_do("Verifique se a presença de Starforce ou outros drivers de SATA de terceiros")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(True)
+        questions.sata_drivers_installed(True)   
+        questions.scans_scheduled(False)
+        questions.ten_per_cent_or_more_free_space(True)
+        questions.ahci_for_sata_dma_for_pata(True)
+        questions.ssd_drive(False)
+        questions.ran_scandisk_and_defrag(True)
+        questions.drive_always_noisy(False)
+
+what_to_do_check_for_virus_replace_data_cable_reduce_heat_increase_free_space
+    use what_to_do("Verifique se o dispositivo não esta com virus. Subistitua o cabo de dados, diminua a temperatura e aumente o espaço de armazenamento")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(False)
+        questions.cycles_on_and_off(False)
+        questions.data_or_smart_errors(True)
+
+what_to_do_striping_for_speed_vs_realiability_enable_in_bios_rebuild_fail_tolerant_raid_with_new_drive_see_text
+    use what_to_do("Divida a configuração do RAID para velocidade e confiabilidade, para habilitar é na BIOS.Reconstrua uma RAID tolerante a falhas com uma nova unidade")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(False)
+        questions.cycles_on_and_off(False)
+        questions.data_or_smart_errors(False)
+        questions.raid_performance_recovery(True)
+
+what_to_do_check_for_presence_of_starforce_or_other_third_party_sata_drivers_see_other_flowcharts_2
+    use what_to_do("Verifique se a presença de Starforce ou outros drivers de SATA de terceiros")
+    when
+        questions.which_problem($ans)
+        check $ans in (3, )
+        questions.os_on_drive_boots(True)
+        questions.slow_or_noisy(False)
+        questions.cycles_on_and_off(False)
+        questions.data_or_smart_errors(False)
+        questions.raid_performance_recovery(False)
+    
+# ---------------------------------
+# ||                             ||  
+# ||     Motherboard Failure     ||
+# ||                             ||
+# ---------------------------------
 what_to_do_restore_one_adapter_or_component_at_a_time_unplugging_or_shutting_off_power_strip
     use what_to_do("Restaure um adaptador ou componente por vez, ou unplugue e/ou desligue o conector de energia de cada vez. Até que o problema seja identificado")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.freezes_on_boot(True)
         questions.freezes_bare_bones(False)
 
 what_to_do_load_default_from_bios_safe_settings
     use what_to_do("Carregue consigurações padroes da bios")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.freezes_on_boot(True)
         questions.freezes_bare_bones(True)
@@ -510,16 +802,9 @@ what_to_do_load_default_from_bios_safe_settings
 
 what_to_do_replace_heatsink_if_not_certified
     use what_to_do("Troque o dissipador de calor caso nao for compativel, cheque a fonte de alimentacao")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.freezes_on_boot(True)
         questions.freezes_bare_bones(True)
@@ -529,16 +814,9 @@ what_to_do_replace_heatsink_if_not_certified
 
 what_to_do_check_motherboard_manufacturer_website_swap_or_shuffle_ram
     use what_to_do("Confira o site do fabricante a placa-mae, troque de posição ou utilize outras memorias ram")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.freezes_on_boot(True)
         questions.freezes_bare_bones(True)
@@ -549,16 +827,9 @@ what_to_do_check_motherboard_manufacturer_website_swap_or_shuffle_ram
 
 what_to_do_undo_upgrade_confirm_exact_cpu_ram_model_compatible_with_motherboard
     use what_to_do("Desfaça o upgrade e confirme se os exatos CPU e RAM sao compativeis com a placa-mae")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.power_diagnostic_done(True)
         questions.video_diagnostic_done(True)
@@ -566,16 +837,9 @@ what_to_do_undo_upgrade_confirm_exact_cpu_ram_model_compatible_with_motherboard
 
 what_to_do_reseat_ram_minimize_number_of_dimms_positive_lever_lock
     use what_to_do("Recoloque a ram, minimizse o numero de DIMMs, trave o trava")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.power_diagnostic_done(True)
         questions.video_diagnostic_done(True)
@@ -584,16 +848,9 @@ what_to_do_reseat_ram_minimize_number_of_dimms_positive_lever_lock
 
 what_to_do_reseat_cpu_and_heatsink
     use what_to_do("Reencaixe o CPU e o dissipador de calor")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.power_diagnostic_done(True)
         questions.video_diagnostic_done(True)
@@ -603,16 +860,9 @@ what_to_do_reseat_cpu_and_heatsink
 
 what_to_do_remove_motherboard_battery_wait_one_hour
     use what_to_do("Tire a bateria da placa-mae e espere uma hora")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.power_diagnostic_done(True)
         questions.video_diagnostic_done(True)
@@ -623,16 +873,9 @@ what_to_do_remove_motherboard_battery_wait_one_hour
 
 what_to_do_remove_motherboard_battery_wait_one_hour1
     use what_to_do("Tire a bateria da placa-mae e espere uma hora")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.freezes_on_boot(True)
         questions.freezes_bare_bones(True)
@@ -641,16 +884,9 @@ what_to_do_remove_motherboard_battery_wait_one_hour1
 
 what_to_do_check_fan_power_point_may_not_come_on_instantly_at_boot
     use what_to_do("Cheque a fonte de energia do fan, pode nao chegar ao dar o boot")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.power_diagnostic_done(True)
         questions.video_diagnostic_done(True)
@@ -662,16 +898,9 @@ what_to_do_check_fan_power_point_may_not_come_on_instantly_at_boot
 
 what_to_do_check_fan_power_point_may_not_come_on_instantly_at_boot1
     use what_to_do("Cheque a fonte de energia do fan, pode nao chegar ao dar o boot")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.freezes_on_boot(True)
         questions.freezes_bare_bones(True)
@@ -681,16 +910,9 @@ what_to_do_check_fan_power_point_may_not_come_on_instantly_at_boot1
 
 what_to_do_swap_ram_swap_video
     use what_to_do("Troque a memoria ram, troque a placa de video")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.power_diagnostic_done(True)
         questions.video_diagnostic_done(True)
@@ -703,16 +925,9 @@ what_to_do_swap_ram_swap_video
 
 what_to_do_swap_ram_swap_video1
     use what_to_do("Troque a memoria ram, troque a placa de video")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.freezes_on_boot(True)
         questions.freezes_bare_bones(True)
@@ -723,16 +938,9 @@ what_to_do_swap_ram_swap_video1
 
 what_to_do_restore_factory_motherboard_settings
     use what_to_do("Restoure as configuraçoes de fabrica da placa-mae")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.power_diagnostic_done(True)
         questions.video_diagnostic_done(True)
@@ -746,16 +954,9 @@ what_to_do_restore_factory_motherboard_settings
 
 what_to_do_restore_factory_motherboard_settings1
     use what_to_do("Restoure as configuraçoes de fabrica da placa-mae")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.freezes_on_boot(True)
         questions.freezes_bare_bones(True)
@@ -766,16 +967,9 @@ what_to_do_restore_factory_motherboard_settings1
         questions.default_motherboard_settings(False)
 what_to_do_locate_short_binding_swap_case
     use what_to_do("locate_short_binding_or_swap_case")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.power_diagnostic_done(True)
         questions.video_diagnostic_done(True)
@@ -790,16 +984,9 @@ what_to_do_locate_short_binding_swap_case
 
 what_to_do_locate_short_binding_swap_case1
     use what_to_do("locate_short_binding_or_swap_case")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.freezes_on_boot(True)
         questions.freezes_bare_bones(True)
@@ -812,16 +999,9 @@ what_to_do_locate_short_binding_swap_case1
 
 what_to_do_bad_cpu_watch_voltage_and_heatsink_on_replacement
     use what_to_do("CPU ruim, confira a voltagem e o dissipador durante a troca")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.power_diagnostic_done(True)
         questions.video_diagnostic_done(True)
@@ -837,16 +1017,9 @@ what_to_do_bad_cpu_watch_voltage_and_heatsink_on_replacement
 
 what_to_do_bad_cpu_watch_voltage_and_heatsink_on_replacement1
     use what_to_do("CPU ruim, confira a voltagem e o dissipador durante a troca")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.freezes_on_boot(True)
         questions.freezes_bare_bones(True)
@@ -861,16 +1034,9 @@ what_to_do_bad_cpu_watch_voltage_and_heatsink_on_replacement1
 
 what_to_do_motherboard_or_power_supply_bad
     use what_to_do("placa-mae ou fonte de alimentacao ruins")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.power_diagnostic_done(True)
         questions.video_diagnostic_done(True)
@@ -886,16 +1052,9 @@ what_to_do_motherboard_or_power_supply_bad
 
 what_to_do_motherboard_or_power_supply_bad1
     use what_to_do("placa-mae ou fonte de alimentacao ruins")
-    when 
-        questions.power_comes_on(True)
-        questions.live_screen(False)
-        questions.does_system_power_up(True)
-        questions.live_screen_video_failure(False)
-        questions.monitor_led_on(True)
-        questions.dual_monitors(False)
-        questions.heer_a_string_of_beeps(True)
-        questions.video_card_seated_tested(True)
-        questions.pc_memory_tested(True)
+    when
+        questions.which_problem($ans)
+        check $ans in (2,)
         questions.live_screen_motherboard_failure(True)
         questions.freezes_on_boot(True)
         questions.freezes_bare_bones(True)
@@ -906,12 +1065,6 @@ what_to_do_motherboard_or_power_supply_bad1
         questions.default_motherboard_settings(True)
         questions.runs_on_bench(False)
         questions.cpu_swap_work(False)
-# ---------------------------------
-# ||                             ||  
-# ||     Motherboard Failure     ||
-# ||                             ||
-# ---------------------------------
-
 # ---------------------------------
 # ||                             ||  
 # ||   Motherboard Performace    ||
@@ -945,6 +1098,8 @@ what_to_do_update_video_driver
         questions.driver_updated(False)
 
 what_to_do_monitor_GPU_temperature
+    use what_to_do("Monitore a temperatura do GPU e verifique se o driver esta atualizado")
+    when
         questions.random_reboot_or_freeze(True)
         questions.clean_power(True)
         questions.ran_scan_system_restore(True)
@@ -1129,3 +1284,349 @@ what_to_do_replace_battery
     when
         questions.random_reboot_or_freeze(False)
         questions.forgets_time_cmos_settings(True)
+
+# ---------------------------------
+# ||                             ||  
+# ||     ATA Drive Failure       ||
+# ||                             ||
+# ---------------------------------
+
+what_to_do_check_cmos_settings_windows_drivers
+    use what_to_do("Verifique a configuração do CMOS e os drivers do Windows")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive_ata_failure(True)
+        questions.pata_or_sata(False)
+
+what_to_do_swap_power_lead_test_in_usb_shell_pc
+    use what_to_do("Troque o cabo de alimentação, teste o USB")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_seek_spin_up(False)
+
+what_to_do_check_on_drive_comapatibility_jumper_to_force_slower_speed
+    use what_to_do("Verifique o jumper da compatibilidade no disco, para forçar uma velocidade mais lenta")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_seek_spin_up(True)
+        questions.sata_drive(True)
+        questions.sata_two_or_sata_three(True)
+
+what_to_do_bios_on_old_motherboard_may_fail_to_detect_SATA_when_present
+    use what_to_do("A BIOS em uma placa de video antiga pode falhar em detectar o SATA quando esta presente")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_seek_spin_up(True)
+        questions.sata_drive(True)
+        questions.sata_two_or_sata_three(False)
+        questions.data_connection_good(True)
+
+what_to_do_check_data_cable_seated_both_ends_test_cable
+    use what_to_do("Verifique o cabo de dados encaixado em ambas as saidas, teste o cabo")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_seek_spin_up(True)
+        questions.sata_drive(True)
+        questions.sata_two_or_sata_three(False)
+        questions.data_connection_good(False)
+
+what_to_do_select_master_slave_or_cs_cs_requires_conductor_ide_cable_or_custom_40_wire_cable
+    use what_to_do("Selecione o modo Mestre/Escravo ou CS. CS requer o cabo 80 IDE de condutores ou cabo personalizado de 40 fios")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive(True)
+        questions.pata_or_sata(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(False)
+        questions.set_cable_select_cs(False)
+
+what_to_do_select_master_slave_or_cs_cs_requires_conductor_ide_cable_or_custom_40_wire_cable_2
+    use what_to_do("Selecione o modo Mestre/Escravo ou CS. CS requer o cabo 80 IDE de condutores ou cabo personalizado de 40 fios")
+    when        
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive(False)
+        questions.drive_seek_spin_up(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(False)
+        questions.set_cable_select_cs(False)
+
+what_to_do_reaplace_ide_cable_if_bios_still_doesnt_register_drive_either_motherboard_controller_or_drive_is_bad_or_incompatible
+    use what_to_do("Troque o cabo da IDE, se a BIOS não registrar o disco, o controlador da placa-mãe ou o disco for incompativel ou estiver com defeito")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive(True)
+        questions.pata_or_sata(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(False)
+        questions.set_cable_select_cs(True)
+        questions.cables_seated_new(True)
+        questions.ide_ribbon_cable_keyed(True)
+
+what_to_do_reaplace_ide_cable_if_bios_still_doesnt_register_drive_either_motherboard_controller_or_drive_is_bad_or_incompatible_2
+    use what_to_do("Troque o cabo da IDE, se a BIOS não registrar o disco, o controlador da placa-mãe ou o disco for incompativel ou estiver com defeito")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive(True)
+        questions.pata_or_sata(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(True)
+        questions.cables_seated_new(True)
+        questions.ide_ribbon_cable_keyed(True)
+
+what_to_do_reaplace_ide_cable_if_bios_still_doesnt_register_drive_either_motherboard_controller_or_drive_is_bad_or_incompatible_3
+    use what_to_do("Troque o cabo da IDE, se a BIOS não registrar o disco, o controlador da placa-mãe ou o disco for incompativel ou estiver com defeito")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_seek_spin_up(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(False)
+        questions.set_cable_select_cs(True)
+        questions.cables_seated_new(True)
+        questions.ide_ribbon_cable_keyed(True)
+
+what_to_do_reaplace_ide_cable_if_bios_still_doesnt_register_drive_either_motherboard_controller_or_drive_is_bad_or_incompatible_4
+    use what_to_do("Troque o cabo da IDE, se a BIOS não registrar o disco, o controlador da placa-mãe ou o disco for incompativel ou estiver com defeito")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_seek_spin_up(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(True)
+        questions.set_cable_select_cs(True)
+        questions.cables_seated_new(True)
+        questions.ide_ribbon_cable_keyed(True)
+
+what_to_do_match_pin_one_on_all_connectors
+    use what_to_do("Corresponder o pino 1 em todos os conectores")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive(True)
+        questions.pata_or_sata(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(False)
+        questions.set_cable_select_cs(True)
+        questions.cables_seated_new(True)
+        questions.ide_ribbon_cable_keyed(False)
+
+what_to_do_match_pin_one_on_all_connectors_2
+    use what_to_do("Corresponder o pino 1 em todos os conectores")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive(True)
+        questions.pata_or_sata(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(True)
+        questions.cables_seated_new(True)
+        questions.ide_ribbon_cable_keyed(False)
+
+what_to_do_match_pin_one_on_all_connectors_3
+    use what_to_do("Corresponder o pino 1 em todos os conectores")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_seek_spin_up(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(False)
+        questions.set_cable_select_cs(True)
+        questions.cables_seated_new(True)
+        questions.ide_ribbon_cable_keyed(False)
+
+what_to_do_match_pin_one_on_all_connectors_4
+    use what_to_do("Corresponder o pino 1 em todos os conectores")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_seek_spin_up(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(True)
+        questions.set_cable_select_cs(True)
+        questions.cables_seated_new(True)
+        questions.ide_ribbon_cable_keyed(False)
+
+what_to_do_reseat_ide_and_power_cables_replace_ide_cables_if_in_doubt
+    use what_to_do("Resete a IDE e seus cabos de energia, troque os cabos se estiver em duvida")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive(True)
+        questions.pata_or_sata(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(False)
+        questions.set_cable_select_cs(True)
+        questions.cables_seated_new(False)
+
+what_to_do_reseat_ide_and_power_cables_replace_ide_cables_if_in_doubt_2
+    use what_to_do("Resete a IDE e seus cabos de energia, troque os cabos se estiver em duvida")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive(True)
+        questions.pata_or_sata(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(True)
+        questions.cables_seated_new(False)
+
+what_to_do_reseat_ide_and_power_cables_replace_ide_cables_if_in_doubt_3
+    use what_to_do("Resete a IDE e seus cabos de energia, troque os cabos se estiver em duvida")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_seek_spin_up(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(False)
+        questions.set_cable_select_cs(True)
+        questions.cables_seated_new(False)
+
+what_to_do_reseat_ide_and_power_cables_replace_ide_cables_if_in_doubt_4
+    use what_to_do("Resete a IDE e seus cabos de energia, troque os cabos se estiver em duvida")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_seek_spin_up(True)
+        questions.sata_drive(False)
+        questions.set_master_slave(True)
+        questions.set_cable_select_cs(True)
+        questions.cables_seated_new(False)
+
+what_to_do_back_up_the_data_on_the_drive_a_failure_is_impending
+    use what_to_do("Faça um backup imediatamente. Uma falha pode ocorrer a qualquer momento")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(True)
+        questions.smart_error(True)
+
+what_to_do_use_bootable_usb_drive_to_install_firmware_update
+    use what_to_do("Use um usb bootavel para instalar a atualização de firmware")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(True)
+        questions.smart_error(False)
+        questions.ssd_drive_ata_failure(True)
+        questions.firmware_updated(False)
+
+what_to_do_swap_power_lead_isolate_on_controller_power_management
+    use what_to_do("Troque o cabo de alimentação, isole no controlador, problema esta no gerenciamento de energia")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(True)
+        questions.smart_error(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_cycles_up_down(True)
+
+what_to_do_drive_cant_find_boot_sector_or_surface_damage_errors
+    use what_to_do("O disco não consegue encontrar o setor de inicialização, ou pode ter danos na superficie")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(True)
+        questions.smart_error(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_cycles_up_down(False)
+        questions.clicks_unending(True)
+
+when_to_do_pata_hard_drives_require_conductor_cable_check_mode_in_cmos
+    use what_to_do("Discos rigidos do tipo PATA necessitam do cabo condutor 80, veja o tipo no CMOS")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(True)
+        questions.smart_error(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_cycles_up_down(False)
+        questions.clicks_unending(False)
+        questions.mode_transfer_speed_correct(False)
+
+what_to_do_isolate_drive_on_primary_if_disk_management_or_fdisk_still_doesnt_see_drive_the_mbr_may_be_damaged_by_a_virus
+    use what_to_do("Isole o disco primario se o gerenciamento de disco ou o FDISK não reconhecer o disco. O MBR pode estar danificado com um virus")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(True)
+        questions.smart_error(False)
+        questions.ssd_drive_ata_failure(False)
+        questions.drive_cycles_up_down(False)
+        questions.clicks_unending(False)
+        questions.mode_transfer_speed_correct(True)
+        questions.does_os_tool_see_drive(False)
+
+what_to_do_isolate_drive_on_primary_if_disk_management_or_fdisk_still_doesnt_see_drive_the_mbr_may_be_damaged_by_a_virus_2
+    use what_to_do("Isole o disco primario se o gerenciamento de disco ou o FDISK não reconhecer o disco. O MBR pode estar danificado com um virus")
+    when
+        questions.os_on_drive_boots(False)
+        questions.cmos_boot_order_set(True)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(True)
+        questions.smart_error(False)
+        questions.ssd_drive_ata_failure(True)
+        questions.firmware_updated(True)
+        questions.does_os_tool_see_drive(False)
+

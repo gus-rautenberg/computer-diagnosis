@@ -7,6 +7,14 @@
 # Network Hardware Diagnostics linha 481
 # ATA Drive Failure linha 588
 
+which_problem($ans)
+	Are any of the following disasters currently occurring?
+	---
+	$ans = select_1
+		1: Comecar_do_inicio
+		2: Motherboard
+		3: HD
+
 # POWER SUPPLY (PSU) FAILURE
 
 power_comes_on($ans)
