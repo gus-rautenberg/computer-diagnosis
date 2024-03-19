@@ -8,7 +8,7 @@
 # ATA Drive Failure linha 588
 
 which_problem($ans)
-	Are any of the following disasters currently occurring?
+	Qual opção se encaixa melhor o seu problema?
 	---
 	$ans = select_1
 		1: Comecar_do_inicio
