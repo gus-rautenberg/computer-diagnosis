@@ -192,6 +192,11 @@ fan_noisy($ans)
     $ans = yn
 
 # Motherboard, CPU, RAM Failure
+live_screen_motherboard_failure($ans)
+    Confirmando, a tela ligou agora?
+    ---
+    $ans = yn 
+
 
 # não sei se a pergunta abaixo é pertinente
 power_diagnostic_done($ans)
