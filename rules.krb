@@ -258,6 +258,220 @@ what_to_do_restore_one_adapter_or_component_at_a_time_unplugging_or_shutting_off
         questions.live_screen(True)
         questions.freezes_on_boot(True)
         questions.freezes_bare_bones(False)
+#MP_1
+what_to_do_UPS_to_protect
+    use what_to_do("Ligue o dispositivo em um no break")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.random_reboot_or_freeze(True)
+        questions.clean_power(False)
+#MP_2
+what_to_do_make_it_less_hotter
+    use what_to_do("Troque o cooler do processaor, melhore a circulação de ar no gabinete ou desabilite o multi-core")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.random_reboot_or_freeze(True)
+        questions.clean_power(True)
+        questions.cpu_temperature_stable(False)
+#MP_3
+what_to_do_run_anti_virus1
+    use what_to_do("Rode um software de reconhecimento de virus ou malware ou restaure o sistema")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.random_reboot_or_freeze(True)
+        questions.cpu_temperature_stable(True)
+        questions.ran_scan_system_restore(False)
+#MP_4
+what_to_do_update_BIOS
+    use what_to_do("Atualize a BIOS e restaure as configurações ao padrão")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.random_reboot_or_freeze(True)
+        questions.ran_scan_system_restore(True)
+        questions.bios_updated(False)
+#MP_5
+what_to_do_download_memory_testing_software
+    use what_to_do("Instale um software para teste de memoria")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.random_reboot_or_freeze(True)
+        questions.bios_updated(True)
+        questions.ram_tested(False)
+#MP_6
+what_to_do_replace_power_suply
+    use what_to_do("Troque a fonte")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.random_reboot_or_freeze(True)
+        questions.ram_tested(True)
+        questions.psu_tested_good(False)
+#MP_7
+what_to_do_monitor_GPU_temperature
+    use what_to_do("Monitore a temperatura do GPU e verifique se o driver esta atualizado")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.random_reboot_or_freeze(True)
+        questions.psu_tested_good(True)
+        questions.gpu_temp(False)
+        #mudar essa pergunta acima gpu temp e colocar driver
+#MP_8
+what_to_do_motherboard_cpu_malware
+    use what_to_do("Problema de compatibilidade de hardware, software corrompido ou malware")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.random_reboot_or_freeze(True)
+        questions.gpu_temp(True)
+        questions.tested_bare_bones(True)
+#MP_9
+what_to_do_remove_all_adapters
+    use what_to_do("Remova todos os adaptadores, exceto os de vídeo, desconecte todos os periféricos USB e desplugue todos os dispositivos que compartilham")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.random_reboot_or_freeze(True)
+        questions.gpu_temp(True)
+        questions.tested_bare_bones(False)
+
+#MP_10
+what_to_do_replace_battery
+    use what_to_do("Troque a bateria da placa mãe")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.random_reboot_or_freeze(False)
+        questions.forgets_time_cmos_settings(True)
+
+
+#MP_11
+what_to_do_driver_issue
+    use what_to_do("Comumente resolvido ao atualizar drivers, principalmente os mais genéricos")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.forgets_time_cmos_settings(False)
+        questions.wont_wake_from_sleep(True)
+#MP_12
+what_to_do_confirm_exact_match
+    use what_to_do("Espere a detecção de drivers e instale o que falta")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.wont_wake_from_sleep(False)
+        questions.hangs_installing_drivers(True)
+#MP_13
+what_to_do_run_anti_virus2
+    use what_to_do("Rode um software de reconhecimento de virus ou malware ou restaure o sistema")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.hangs_installing_drivers(False)
+        questions.recent_performance_drop(True)
+#MP_14
+what_to_do_trust_DTS
+    use what_to_do("Se a placa mão suporta sensores de temperatura digital, de prefêrencia a suas aferições ás da placa mãe")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.recent_performance_drop(False)
+        questions.high_cpu_temp(True)
+#MP_15
+what_to_do_check_compatibility_and_BIOS_update
+    use what_to_do("Cheque compatibilidade e atualize a BIOS. Caso não resolva troque o processador")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.high_cpu_temp(False)
+        questions.os_missing_cpu_cores(True)
+#MP_16
+what_to_do_check_chipset
+    use what_to_do("Cheque se o chipset suporta todos os slots de memoria ocupados")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.ram_performance_slow(True)
+        questions.banks_matched_ganged(True)
+#MP_17
+what_to_do_ganging_impacts_speed
+    use what_to_do("Trabalhar em conjunto impacta na velocidade, caso não estejam a placa mão force as memórias a trabalhar na menor velocidade")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.ram_performance_slow(True)
+        questions.banks_matched_ganged(False)
+#MP_18
+what_to_do_PCI_card_backwards
+    use what_to_do("As placas PCI Express são retrocompativeis e podem encaixar em um slot em modo x1")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.ram_performance_slow(False)
+        questions.pcie_version_slot_lanes(True)
+#MP_19
+what_to_do_attached_components_aproved
+    use what_to_do("Confirme se todos os componentes ligados a placa mãe são aprovados pela fabricante")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.pcie_version_slot_lanes(False)
+        questions.onboard_device_issue(False)
+
+#MP_20
+what_to_do_device_failure
+    use what_to_do("Problema relacionado a um dispotivo específico que não está listado neste sistema.")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.live_screen(True)
+        questions.freezes_on_boot(False)
+        questions.pcie_version_slot_lanes(False)
+        questions.onboard_device_issue(True)
+
 #7
 what_to_do_load_default_from_bios_safe_settings
     use what_to_do("Carregue consigurações padroes da bios")
@@ -376,3 +590,12 @@ what_to_do_motherboard_or_power_supply_bad
 # ||   Motherboard Performace    ||
 # ||                             ||
 # ---------------------------------
+
+
+
+
+
+
+
+
+
