@@ -75,7 +75,7 @@ checked_motherboard_lead($ans)
     $ans = yn
 
 power_switch_fail($ans)
-    Botão de ligar falou?
+    Botão de ligar falhou?
     ---
     $ans = yn
 
