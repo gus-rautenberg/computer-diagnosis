@@ -50,7 +50,7 @@ new_hardware_installed($ans)
     $ans = yn
 
 loud_fan_noise($ans)
-    A ventoinha esta barulhenta?
+    A ventoinha da fonte esta barulhenta?
     ---
     $ans = yn
 
