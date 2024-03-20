@@ -821,6 +821,15 @@ what_to_do_use_bootable_usb_drive_to_install_firmware_update
         questions.ssd_drive_ata_failure(True)
         questions.firmware_updated(False)
 
+#A6B
+what_to_do_go_to_hd
+    use what_to_do("Reinicie o programa e vá para problemas de HD")
+    when
+        questions.os_on_drive_boots(False)
+        questions.os_usb_boot(False)
+        questions.bios_register_drive(True)
+        questions.does_os_tool_see_drive(True)
+
 #A6
 what_to_do_isolate_drive_on_primary_if_disk_management_or_fdisk_still_doesnt_see_drive_the_mbr_may_be_damaged_by_a_virus
     use what_to_do("Isole o disco primario se o gerenciamento de disco ou o FDISK não reconhecer o disco. O MBR pode estar danificado com um virus")
@@ -847,6 +856,7 @@ what_to_do_swap_power_lead_test_in_usb_shell_pc
         questions.os_usb_boot(False)
         questions.ssd_drive_ata_failure(False)
         questions.drive_seek_spin_up(False)
+
 
 #A9
 what_to_do_check_on_drive_comapatibility_jumper_to_force_slower_speed
