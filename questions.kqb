@@ -85,7 +85,7 @@ psu_connections_to_motherboard_correct($ans)
     $ans = yn
 
 forced_hard_drive_spin_up($ans)
-    O disco esta em alta rotação desnecessariamente?
+    O disco do HD esta em alta rotação desnecessariamente?
     ---
     $ans = yn
 
