@@ -270,7 +270,7 @@ cpu_swap_work($ans)
     $ans = yn
 
 freezes_on_boot($ans)
-    Congela quando esta inicializando? # seria isso ?
+    Congela quando esta inicializando? 
     ---
     $ans = yn
 
@@ -428,7 +428,7 @@ cmos_boot_order_set($ans)
 
 # aqui seria OS DVD, USB boot? como não temos mais DVD, ficara so USB
 os_usb_boot($ans)
-    Sistema operacional esta no USB ? # seria isso ?
+    Sistema operacional esta no USB ? 
     ---
     $ans = yn
 
@@ -439,7 +439,7 @@ just_switched_to_ahci($ans)
 
 # aqui seria Read in USB shell or after DVD boot, não tera mais o dvd
 read_in_usb_shell($ans)
-    O sistema opearcional foi instalado pelo USB ? # seria isso ?
+    O sistema opearcional foi instalado pelo USB ? 
     ---
     $ans = yn
 
@@ -693,12 +693,12 @@ does_os_tool_see_drive($ans)
     $ans = yn
 
 drive_cycles_up_down($ans)
-    O ciclos do disco ligam e desligam ? # seria isso ?
+    O ciclos do disco ligam e desligam ? 
     ---
     $ans = yn
 
 clicks_unending($ans)
-    O disco esta causando cliques continuos ? # seria isso ?
+    O disco esta causando cliques continuos ? 
     ---
     $ans = yn
 
