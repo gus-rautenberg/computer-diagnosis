@@ -318,6 +318,7 @@ what_to_do_remove_motherboard_battery_wait_one_hour1
     when
         questions.which_problem($ans)
         check $ans in (3,)
+        questions.live_screen(True)
         questions.can_you_acess_BIOS(False)
         questions.bios_settings_change(True)
 #13
