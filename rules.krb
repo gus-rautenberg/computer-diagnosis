@@ -835,7 +835,7 @@ what_to_do_proceed_to_drive_failure
         questions.boot_from_cd_or_dvd(False)
 
 #11
-what_to_do_proceed_to_drive_failure
+what_to_do_proceed_to_hd_failure
     use what_to_do("Restarte o programa e inicie a opção de HD failure.")
     when
         questions.which_problem($ans)
