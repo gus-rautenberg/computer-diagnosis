@@ -247,7 +247,7 @@ what_to_do_reseat_cpu_and_heatsink
         questions.which_problem($ans)
         check $ans in (3,)
         questions.live_screen(False)
-        questions.ram_reseated(False)
+        questions.ram_reseated(True)
         questions.cpu_seated_flat(False)
 #6
 what_to_do_restore_one_adapter_or_component_at_a_time_unplugging_or_shutting_off_power_strip
@@ -274,7 +274,7 @@ what_to_do_replace_heatsink_if_not_certified
         questions.which_problem($ans)
         check $ans in (3,)
         questions.live_screen(True)
-        questions.cmos_settings_default(True)
+        questions.can_you_acess_BIOS(True)
         questions.temp_and_voltage_stable(False)
 #9
 what_to_do_check_motherboard_manufacturer_website_swap_or_shuffle_ram
@@ -283,7 +283,7 @@ what_to_do_check_motherboard_manufacturer_website_swap_or_shuffle_ram
         questions.which_problem($ans)
         check $ans in (3,)
         questions.live_screen(True)
-        questions.temp_and_voltage_stable(True)
+        questions.can_you_acess_BIOS(True)
         questions.ram_certified(False)
 
 #10
@@ -293,7 +293,7 @@ what_to_do_proceed_to_drive_failure
         questions.which_problem($ans)
         check $ans in (3,)
         questions.live_screen(True)
-        questions.ram_certified(True)
+        questions.can_you_acess_BIOS(True)
         questions.boot_from_cd_or_dvd(False)
 
 #11
@@ -303,7 +303,7 @@ what_to_do_proceed_to_hd_failure
         questions.which_problem($ans)
         check $ans in (3,)
         questions.live_screen(True)
-        questions.ram_certified(True)
+        questions.can_you_acess_BIOS(True)
         questions.boot_from_cd_or_dvd(True)
 #12        
 what_to_do_remove_motherboard_battery_wait_one_hour
@@ -311,6 +311,14 @@ what_to_do_remove_motherboard_battery_wait_one_hour
     when
         questions.which_problem($ans)
         check $ans in (3,)
+        questions.bios_settings_change(True)
+#12A
+what_to_do_remove_motherboard_battery_wait_one_hour1
+    use what_to_do("Tire a bateria da placa-mae e espere uma hora")
+    when
+        questions.which_problem($ans)
+        check $ans in (3,)
+        questions.can_you_acess_BIOS(False)
         questions.bios_settings_change(True)
 #13
 what_to_do_check_fan_power_point_may_not_come_on_instantly_at_boot
