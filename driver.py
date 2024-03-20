@@ -12,7 +12,7 @@ engine = knowledge_engine.engine(__file__)
     
 def hardware_diagnosis_questions():
 
-    # engine.reset()      # Allows us to run tests multiple times.
+    engine.reset()      # Allows us to run tests multiple times.
 
     engine.activate('rules') #STUDENTS: you will need to edit the name of your rule file here
 
