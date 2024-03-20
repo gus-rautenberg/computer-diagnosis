@@ -50,7 +50,7 @@ new_hardware_installed($ans)
     $ans = yn
 
 loud_fan_noise($ans)
-    A ventoinha esta barulhenta?
+    A ventoinha da fonte esta barulhenta?
     ---
     $ans = yn
 
@@ -85,7 +85,7 @@ psu_connections_to_motherboard_correct($ans)
     $ans = yn
 
 forced_hard_drive_spin_up($ans)
-    O disco esta em alta rotação desnecessariamente?
+    O disco do HD esta em alta rotação desnecessariamente?
     ---
     $ans = yn
 
