@@ -1,2 +1,2 @@
 # computer-diagnosis
-Work in progress
+read jupyter
